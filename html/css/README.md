@@ -1,5 +1,5 @@
 # *html/css* directory
-stylesheet directory.
+Stylesheet directory.
 - **toastpopup.css**  
   stylesheet for popups.
 - **trenolego.css**  
