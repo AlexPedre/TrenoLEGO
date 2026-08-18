@@ -10,9 +10,7 @@ Here is the directory tree description:
 - **img**  
   image directory. It includes images in *ico*, *svg* and *png* formats.
 - **js**  
-  JavaScript library directory. In the future, it will contain JavaScript libraries used to extend the features of TrenoLEGO.
-  Currently, it contains only the Acorn library (not yet in use), which is intended to support the implementation of scripting
-  capabilities.
+  JavaScript directory. It contains JavaScript used in the *Html* pages of TrenoLEGO graphic interface.
 - **mus**  
   music directory. It contains *MIDI* files.
 - **snd**  
