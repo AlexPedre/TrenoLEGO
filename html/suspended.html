@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TrenoLEGO - Suspended</title>
+
+    <link rel="stylesheet" type="text/css" href="css/trenolego.css">
+    <link rel="icon" href="img/favicon.ico"/>
+
+    <script type="text/javascript" src="js/manifest.js" charset="utf-8"></script>
+
+    <script>
+      var Lang;
+      var Year;
+
+      /**** Setup ****/
+
+      function Setup() {
+        const Lang = navigator.language.substring(0, 2);
+
+        document.querySelector('#year').textContent = new Date().getFullYear();
+
+        /**** Translate the labels ****/
+
+        if (Lang == 'it') {
+          document.title                                     = "TrenoLEGO - Sospeso";
+          document.getElementById("lbl_message").innerHTML   = "Spegni e riaccendi per recuperare il sistema.";
+          document.getElementById("lbl_title"  ).innerHTML   = "Sospeso";
+        }
+
+        /**** Here you can translate other languages ****/
+      }
+    </script>
+  </head>
+
+  <body bgcolor="#d9d9d9" onload="Setup()">
+    <div id="page" class="pageback">
+      <div id="lbl_title" class="toptitle">Suspended</div>
+
+      <hr class="hrtop1">
+      <hr class="hrtop2">
+
+      <div id="lbl_message" style="text-align: center; margin: 8vw 0 8vw 0;">
+        Turn off/on to resume the system.
+      </div>
+
+      <hr style="margin-bottom: 0px;">
+      <div align="center" style="font-size: 2vw; padding: 16px 0;">
+        &copy; <span id="year" style="font-size: 2vw;"></span> - Alessandro Pedretti
+      </div>
+    </div>
+  </body>
+</html>

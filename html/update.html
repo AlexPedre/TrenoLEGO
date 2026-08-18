@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/trenolego.css">
+    <link rel="icon" href="img/favicon.ico"/>
+
+    <script type="text/javascript" src="js/manifest.js" charset="utf-8"></script>
+    <script type="text/javascript" src="js/settings.js" charset="utf-8"></script>
+    <script type="text/javascript" src="js/utils.js"    charset="utf-8"></script>
+    <script type="text/javascript" src="js/update.js"   charset="utf-8"></script>
+    <script type="text/javascript" src="js/voice.js"    charset="utf-8"></script>
+  </head>
+
+  <body bgcolor="#d9d9d9" onload="Setup()">
+    <div id="page" class="pageback">
+      <div id="lbl_title" class="toptitle"></div>
+      <div class="subtitle1" style="margin-top: -7.5vw;">
+        <table width="100%">
+          <tr>
+            <td valign="bottom" style="text-align: left;">
+              <button id="bt_config" class="button_cfg" onclick="BT_ConfigClick();">
+                <img class="button_sndimg" src="img/settings.svg">
+              </button>
+            </td>
+            <td valign="bottom" style="text-align: right;">
+              <button id="bt_controls" class="button_rcfg" onclick="BT_ControlsClick();">
+                <img class="button_sndimg" src="img/control.svg">
+              </button>
+            </td>
+          </tr>
+        </table>
+      </div>
+
+      <hr class="hrtop1">
+      <hr class="hrtop2">
+      <form method='POST' action='/doUpdate' enctype='multipart/form-data'>
+	      <table style="border-spacing: 1vw; margin-left: auto; margin-right: auto;">
+          <tr><td><hr class="hrtable-top"></td></tr>
+          <tr><td>
+            <input type="file" name="update">
+          </td></tr>
+          <tr><td><hr class="hrtable"></td></tr>
+          <tr><td align="center">
+	          <input class="button button2" id="bt_update" type="submit" value="Update">
+          </td></tr>
+        </table>
+      </form>
+      <hr style="margin-bottom: 0px;">
+      <div align="center" style="font-size: 2vw; padding: 16px 0;">
+        &copy; <span id="year" style="font-size: 2vw;"></span> - Alessandro Pedretti
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/trenolego.css">
+    <link rel="icon" href="img/favicon.ico"/>
+
+    <script type="text/javascript" src="js/manifest.js" charset="utf-8"></script>
+    <script type="text/javascript" src="js/utils.js" charset="utf-8"></script>
+    <script>
+
+      /**** Localization ****/
+
+      if (Lang == 'it') {
+
+        /**** Italian ****/
+
+        Msg = {
+          LblTitle              : "Riavvio del sistema in corso",
+          LblWait               : "Attendere prego...",
+
+          PageTitle             : "TrenoLEGO - Reboot dopo aggiornamento"
+        };
+
+      } else {
+
+        /**** Default language (english) ****/
+
+        Msg = {
+          LblTitle              : "System reboot",
+          LblWait               : "Please wait...",
+
+          PageTitle             : "TrenoLEGO - Reboot after update"
+        };
+      }
+
+
+      /**** Setup ****/
+
+      function Setup()
+      {
+        document.querySelector('#year').textContent = Year;
+
+        document.title = Msg.PageTitle;
+        TransInner("lbl_title", Msg.LblTitle);
+        TransInner("lbl_wait" , Msg.LblWait );
+      }
+
+      setTimeout('location.href="index.html"', 60000);
+    </script>
+  </head>
+
+  <body bgcolor="#d9d9d9" onload="Setup()">
+    <div id="page" class="pageback">
+      <div id="lbl_title" class="toptitle"></div>
+      <hr class="hrtop1">
+      <hr class="hrtop2">
+
+      <div align="center" style="margin-top: 3vw;">
+        <div class="loader"></div>
+        <p id="lbl_wait" align="center" style="font-size: 3vw;"></p>
+      </div>
+
+      <hr style="margin-bottom: 0px;">
+      <div align="center" style="font-size: 2vw; padding: 16px 0;">
+        &copy; <span id="year" style="font-size: 2vw;"></span> - Alessandro Pedretti
+      </div>
+    </div>
+
+    <script>
+      window.addEventListener('load', function() {
+        setTimeout(function() {
+          window.location.href = "/";
+        }, 10000);
+      });
+    </script>
+  </body>
+</html>

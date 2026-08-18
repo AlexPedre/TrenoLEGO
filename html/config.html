@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/trenolego.css">
+    <link rel="icon" href="img/favicon.ico"/>
+
+    <script type="text/javascript" src="js/settings.js" charset="utf-8"></script>
+    <script type="text/javascript" src="js/utils.js"    charset="utf-8"></script>
+    <script type="text/javascript" src="js/config.js"   charset="utf-8"></script>
+    <script type="text/javascript" src="js/manifest.js" charset="utf-8"></script>
+    <script type="text/javascript" src="js/music.js"    charset="utf-8"></script>
+    <script type="text/javascript" src="js/voice.js"    charset="utf-8"></script>
+  </head>
+
+  <body bgcolor="#d9d9d9" onload="Setup()">
+    <div id="page" class="pageback">
+
+      <!----------------->
+      <!--- Main menu --->
+      <!----------------->
+
+      <div id="BT_Menu" onclick="BT_MenuClick()" title="Menu">
+        <img class="button_sndimg" src="img/menu.svg">
+      </div>
+
+      <!--- Menu items -->
+
+      <nav id="Menu" class="floating-menu" onmouseleave="MenuClick()">
+        <span>
+          <div><a id="mm_default" class="floating-menu-link" onclick="DefPrefClick();" href="#"></a></div>
+          <div><a id="mm_undo" class="floating-menu-link" onclick="UndoClick();" href="#"></a></div>
+          <hr>
+          <div><a id="mm_apply" class="floating-menu-link" onclick="MenuClick(); SaveClick(false);" href="#"></a></div>
+          <div><a id="mm_save" class="floating-menu-link" onclick="MenuClick(); SaveClick(true);" href="#"></a></div>
+          <hr>
+          <div><a id="mm_suspend" class="floating-menu-link" onclick="CmdClick('suspend')" href="#"></a></div>
+          <div><a id="mm_reboot" class="floating-menu-link" onclick="CmdClick('reboot')" href="#"></a></div>
+        </span>
+      </nav>
+
+      <div id="lbl_title" class="toptitle"></div>
+
+      <div class="subtitle1" style="margin-top: -7.5vw;">
+        <table width="100%">
+          <tr>
+            <td valign="bottom" style="text-align: left;">
+              <button id="bt_controls" class="button_cfg" onclick="BT_ControlsClick();" title="Controls">
+                <img class="button_sndimg" src="img/control.svg">
+              </button>
+              <button id="bt_music" class="button_cfg" onclick="MusicToggle();" title="Music">
+                <img id="bt_musicimg" class="button_sndimg" src="img/music_off.svg">
+              </button>
+            </td>
+            <td valign="bottom" style="text-align: right;">
+              <button id="bt_update" class="button_rcfg" onclick="BT_UpdateClick()" title="Firmware update">
+                <img class="button_sndimg" src="img/upload.svg">
+              </button>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <hr class="hrtop1">
+      <hr class="hrtop2">
+
+      <div id="Tabs" class="tabbar">
+        <button id="tab_network"   class="tablink" onclick="OpenTab('Network'  , this)"></button>
+        <button id="tab_trains"    class="tablink" onclick="OpenTab('Trains'   , this)"></button>
+        <button id="tab_poweredup" class="tablink" onclick="OpenTab('PoweredUp', this)">Powered Up</button>
+        <button id="tab_others"    class="tablink" onclick="OpenTab('Others'   , this)"></button>
+      </div>
+
+      <!--------------->
+      <!--- Network --->
+      <!--------------->
+
+      <div id="Network" class="tabcontent">
+        <table style="border-spacing: 1vw; margin-left: auto; margin-right: auto;">
+
+          <!------------>
+          <!--- WiFi --->
+          <!------------>
+
+          <tr><td class="tdtitle" colspan="2">WiFi</td></tr>
+          <tr><td colspan="2"><hr class="hrtable"></td></tr>
+          <tr>
+            <td id="lbl_hostname"></td>
+            <td><input id="str_hostname" class="textinput" type="text" maxlength="31"></input></td>
+          </tr>
+          <tr>
+            <td>SSID:</td>
+            <td><input id="str_ssid" class="textinput" type="text" maxlength="32"></input></td>
+          </tr>
+          <tr>
+            <td>Password:</td>
+            <td><input id="str_wifipwd" class="textinput" type="text" maxlength="63"></td>
+          </tr>
+
+          <!---------------------------->
+          <!--- FTP & telnet servers --->
+          <!---------------------------->
+
+          <tr><td id="lbl_ftpsrv" class="tdtitle" colspan="2"></td></tr>
+          <tr><td colspan="2"><hr class="hrtable"></td></tr>
+          <tr>
+            <td id="lbl_ftpen"></td>
+            <td>
+              <label class="switch">
+                <input id="ck_ftpen" type="checkbox">
+                <span class="slider round"></span>
+              </label>
+            </td>
+          </tr>
+          <tr>
+            <td id="lbl_telneten"></td>
+            <td>
+              <label class="switch">
+                <input id="ck_telneten" type="checkbox">
+                <span class="slider round"></span>
+              </label>
+            </td>
+          </tr>
+
+          <!------------>
+          <!--- MQTT --->
+          <!------------>
+
+          <tr><td class="tdtitle" colspan="2">MQTT</td></tr>
+          <tr><td colspan="2"><hr class="hrtable"></td></tr>
+          <tr>
+            <td id="lbl_mqtten"></td>
+            <td>
+              <label class="switch">
+                <input id="ck_mqtten" type="checkbox">
+                <span class="slider round"></span>
+              </label>
+            </td>
+          </tr>
+          <tr>
+            <td>Server:</td>
+            <td><input id="str_mqttserver" class="textinput" type="text" maxlength="31"></td>
+          </tr>
+          <tr>
+            <td id="lbl_mqttport"></td>
+            <td><input id="str_mqttport" class="textinput" type="number" min="1" max="65535"></td>
+          </tr>
+          <tr>
+            <td id="lbl_mqttuser"></td>
+            <td><input id="str_mqttuser" class="textinput" type="text" maxlength="31"></td>
+          </tr>
+          <tr>
+            <td>Password:</td>
+            <td><input id="str_mqttpwd" class="textinput" type="password" maxlength="31"></td>
+          </tr>
+
+          <!----------->
+          <!--- NTP --->
+          <!----------->
+
+          <tr><td class="tdtitle" colspan="2">Network Time (NTP)</td></tr>
+          <tr><td colspan="2"><hr class="hrtable"></td></tr>
+          <tr>
+            <td>Server:</td>
+            <td><input id="str_ntpserver" class="textinput" type="text" maxlength="31"></td>
+          </tr>
+          <tr>
+            <td id="lbl_timezone"></td>
+            <td><input id="str_timezone" class="textinput" type="text" maxlength="31"></td>
+          </tr>
+
+          <tr><td class="tdtitle" colspan="2"></td></tr>
+        </table>
+      </div>
+
+      <!-------------->
+      <!--- Trains --->
+      <!-------------->
+
+      <div id="Trains" class="tabcontent">
+        <table style="border-spacing: 1vw; margin-left: auto; margin-right: auto;">
+
+
+          <!----------------->
+          <!--- Channel 0 --->
+          <!----------------->
+
+          <tr><td id="lbl_train0" class="tdtitle" colspan="2"></td></tr>
+          <tr><td colspan="2"><hr class="hrtable"></td></tr>
+          <tr>
+            <td id="lbl_train_en0"></td>
+            <td>
+              <label class="switch">
+                <input id="ck_train_en0" type="checkbox">
+                <span class="slider round"></span>
+              </label>
+            </td>
+          </tr>
+          <tr>
+            <td id="lbl_train_inv0"></td>
+            <td>
+              <label class="switch">
+                <input id="ck_train_inv0" type="checkbox">
+                <span class="slider round"></span>
+              </label>
+            </td>
+          </tr>
+          <tr>
+            <td id="lbl_train_name0"></td>
+            <td><input id="str_train_name0" class="textinput" type="text" maxlength="31"></td>
+          </tr>
+          <tr>
+            <td id="lbl_train_namerev0"></td>
+            <td><input id="str_train_namerev0" class="textinput" type="text" maxlength="31"></td>
+          </tr>
+          <tr>
+            <td id="lbl_train_accamount0"></td>
+            <td><input id="str_train_accamount0" class="numinput" type="number" min="1" max="255"></td>
+          </tr>
+          <tr>
+            <td id="lbl_train_accstptime0"></td>
+            <td><input id="str_train_accstptime0" class="numinput" type="number" min="1" max="1000"></td>
+          </tr>
+
+          <!----------------->
+          <!--- Channel 1 --->
+          <!----------------->
+
+          <tr><td id="lbl_train1" class="tdtitle" colspan="2"></td></tr>
+          <tr><td colspan="2"><hr class="hrtable"></td></tr>
+          <tr>
+            <td id="lbl_train_en1"></td>
+            <td>
+              <label class="switch">
+                <input id="ck_train_en1" type="checkbox">
+                <span class="slider round"></span>
+              </label>
+            </td>
+          </tr>
+          <tr>
+            <td id="lbl_train_inv1"></td>
+            <td>
+              <label class="switch">
+                <input id="ck_train_inv1" type="checkbox">
+                <span class="slider round"></span>
+              </label>
+            </td>
+          </tr>
+          <tr>
+            <td id="lbl_train_name1"></td>
+            <td><input id="str_train_name1" class="textinput" type="text" maxlength="31"></td>
+          </tr>
+          <tr>
+            <td id="lbl_train_namerev1"></td>
+            <td><input id="str_train_namerev1" class="textinput" type="text" maxlength="31"></td>
+          </tr>
+          <tr>
+            <td id="lbl_train_port1"></td>
+            <td><select id="cb_train_port1" class="combobox">
+              <option value="RED"></option>
+              <option value="BLUE"></option>
+            </select></td>
+          </tr>
+          <tr>
+            <td id="lbl_train_accamount1"></td>
+            <td><input id="str_train_accamount1" class="numinput" type="number" min="1" max="255"></td>
+          </tr>
+          <tr>
+            <td id="lbl_train_accstptime1"></td>
+            <td><input id="str_train_accstptime1" class="numinput" type="number" min="1" max="1000"></td>
+          </tr>
+
+          <!----------------->
+          <!--- Channel 2 --->
+          <!----------------->
+
+          <tr><td id="lbl_train2" class="tdtitle" colspan="2"></td></tr>
+          <tr><td colspan="2"><hr class="hrtable"></td></tr>
+          <tr>
+            <td id="lbl_train_en2"></td>
+            <td>
+              <label class="switch">
+                <input id="ck_train_en2" type="checkbox">
+                <span class="slider round"></span>
+              </label>
+            </td>
+          </tr>
+          <tr>
+            <td id="lbl_train_inv2"></td>
+            <td>
+              <label class="switch">
+                <input id="ck_train_inv2" type="checkbox">
+                <span class="slider round"></span>
+              </label>
+            </td>
+          </tr>
+          <tr>
+            <td id="lbl_train_name2"></td>
+            <td><input id="str_train_name2" class="textinput" type="text" maxlength="31"></td>
+          </tr>
+          <tr>
+            <td id="lbl_train_namerev2"></td>
+            <td><input id="str_train_namerev2" class="textinput" type="text" maxlength="31"></td>
+          </tr>
+          <tr>
+            <td id="lbl_train_port2"></td>
+            <td><select id="cb_train_port2" class="combobox">
+              <option value="RED"></option>
+              <option value="BLUE"></option>
+            </select></td>
+          </tr>
+          <tr>
+            <td id="lbl_train_accamount2"></td>
+            <td><input id="str_train_accamount2" class="numinput" type="number" min="1" max="255"></td>
+          </tr>
+          <tr>
+            <td id="lbl_train_accstptime2"></td>
+            <td><input id="str_train_accstptime2" class="numinput" type="number" min="1" max="1000"></td>
+          </tr>
+
+          <!----------------->
+          <!--- Channel 3 --->
+          <!----------------->
+
+          <tr><td id="lbl_train3" class="tdtitle" colspan="2"></td></tr>
+          <tr><td colspan="2"><hr class="hrtable"></td></tr>
+          <tr>
+            <td id="lbl_train_en3"></td>
+            <td>
+              <label class="switch">
+                <input id="ck_train_en3" type="checkbox">
+                <span class="slider round"></span>
+              </label>
+            </td>
+          </tr>
+          <tr>
+            <td id="lbl_train_inv3"></td>
+            <td>
+              <label class="switch">
+                <input id="ck_train_inv3" type="checkbox">
+                <span class="slider round"></span>
+              </label>
+            </td>
+          </tr>
+          <tr>
+            <td id="lbl_train_name3"></td>
+            <td><input id="str_train_name3" class="textinput" type="text" maxlength="31"></td>
+          </tr>
+          <tr>
+            <td id="lbl_train_namerev3"></td>
+            <td><input id="str_train_namerev3" class="textinput" type="text" maxlength="31"></td>
+          </tr>
+          <tr>
+            <td id="lbl_train_port3">Port:</td>
+            <td><select id="cb_train_port3" class="combobox">
+              <option value="RED"></option>
+              <option value="BLUE"></option>
+            </select></td>
+          </tr>
+          <tr>
+            <td id="lbl_train_accamount3"></td>
+            <td><input id="str_train_accamount3" class="numinput" type="number" min="1" max="255"></td>
+          </tr>
+          <tr>
+            <td id="lbl_train_accstptime3"></td>
+            <td><input id="str_train_accstptime3" class="numinput" type="number" min="1" max="1000"></td>
+          </tr>
+
+          <!----------------->
+          <!--- Channel 4 --->
+          <!----------------->
+
+          <tr><td id="lbl_train4" class="tdtitle" colspan="2"></td></tr>
+          <tr><td colspan="2"><hr class="hrtable"></td></tr>
+          <tr>
+            <td id="lbl_train_en4"></td>
+            <td>
+              <label class="switch">
+                <input id="ck_train_en4" type="checkbox">
+                <span class="slider round"></span>
+              </label>
+            </td>
+          </tr>
+          <tr>
+            <td id="lbl_train_inv4"></td>
+            <td>
+              <label class="switch">
+                <input id="ck_train_inv4" type="checkbox">
+                <span class="slider round"></span>
+              </label>
+            </td>
+          </tr>
+          <tr>
+            <td id="lbl_train_name4"></td>
+            <td><input id="str_train_name4" class="textinput" type="text" maxlength="31"></td>
+          </tr>
+          <tr>
+            <td id="lbl_train_namerev4"></td>
+            <td><input id="str_train_namerev4" class="textinput" type="text" maxlength="31"></td>
+          </tr>
+          <tr>
+            <td id="lbl_train_port4"></td>
+            <td><select id="cb_train_port4" class="combobox">
+              <option value="RED"></option>
+              <option value="BLUE"></option>
+            </select></td>
+          </tr>
+          <tr>
+            <td id="lbl_train_accamount4"></td>
+            <td><input id="str_train_accamount4" class="numinput" type="number" min="1" max="255"></td>
+          </tr>
+          <tr>
+            <td id="lbl_train_accstptime4"></td>
+            <td><input id="str_train_accstptime4" class="numinput" type="number" min="1" max="1000"></td>
+          </tr>
+
+          <tr><td class="tdtitle" colspan="2"></td></tr>
+        </table>
+      </div>
+
+      <!------------------>
+      <!--- Powered Up --->
+      <!------------------>
+
+      <div id="PoweredUp" class="tabcontent">
+        <table style="border-spacing: 1vw; margin-left: auto; margin-right: auto;">
+          <tr><td id="lbl_poweredup" class="tdtitle" colspan="2"></td></tr>
+          <tr><td colspan="2"><hr class="hrtable"></td></tr>
+          <tr>
+            <td id="lbl_lego"></td>
+            <td>
+              <label class="switch">
+                <input id="ck_legoen" type="checkbox">
+                <span class="slider round"></span>
+              </label>
+            </td>
+          </tr>
+          <tr>
+            <td id="lbl_puport"></td>
+            <td><select id="cb_pubport" class="combobox">
+              <option value="A">A</option>
+              <option value="B">B</option>
+            </select></td>
+          </tr>
+          <tr><td id="lbl_pubind" class="tdtitle" colspan="2">Bind to train</td></tr>
+          <tr><td colspan="2"><hr class="hrtable"></td></tr>
+          <tr>
+            <td id="lbl_pubindch"></td>
+            <td><select id="cb_pubindch" class="combobox">
+              <option value="0">0</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+            </select></td>
+          </tr>
+
+          <tr><td class="tdtitle" colspan="2"></td></tr>
+        </table>
+      </div>
+
+      <!---------------------->
+      <!--- Other settings --->
+      <!---------------------->
+
+      <div id="Others" class="tabcontent">
+        <table style="border-spacing: 1vw; margin-left: auto; margin-right: auto;">
+
+          <!--------------------------------->
+          <!--- Administrator credentials --->
+          <!--------------------------------->
+
+          <tr><td id="lbl_admin" class="tdtitle" colspan="2"></td></tr>
+          <tr><td colspan="2"><hr class="hrtable"></td></tr>
+          <tr>
+            <td id="lbl_adminuser"></td>
+            <td><input id="str_adminuser" class="textinput" type="text" maxlength="31"></td>
+          </tr>
+          <tr>
+            <td>Password:</td>
+            <td><input id="str_adminpwd" class="textinput" type="password" maxlength="31"></td>
+          </tr
+
+          <!-------------------->
+          <!--- Power saving --->
+          <!-------------------->
+
+          <tr><td id="lbl_pwrsaving" class="tdtitle" colspan="2"></td></tr>
+          <tr><td colspan="2"><hr class="hrtable"></td></tr>
+          <tr>
+            <td id="lbl_sleep"></td>
+            <td>
+              <label class="switch">
+                <input id="ck_sleep" type="checkbox">
+                <span class="slider round"></span>
+              </label>
+            </td>
+          </tr>
+          <tr>
+            <td id="lbl_sleeptime"></td>
+            <td><input id="str_sleeptime" class="textinput" type="number" min="1" max="999999" oninput="validity.valid||(value='');"></input></td>
+          <tr>
+
+          <!-------------->
+          <!--- Others --->
+          <!-------------->
+
+          <tr><td id="lbl_other" class="tdtitle" colspan="2"></td></tr>
+          <tr><td colspan="2"><hr class="hrtable"></td></tr>
+          <tr>
+            <td id="lbl_debug"></td>
+            <td>
+              <label class="switch">
+                <input id="ck_debug" type="checkbox">
+                <span class="slider round"></span>
+              </label>
+            </td>
+          </tr>
+          <tr>
+            <td id="lbl_hue"></td>
+            <td>
+              <label class="switch">
+                <input id="ck_hueen" type="checkbox">
+                <span class="slider round"></span>
+              </label>
+            </td>
+          </tr>
+          <tr>
+            <td id="lbl_speechen"></td>
+            <td>
+              <label class="switch">
+                <input id="ck_speechen" type="checkbox">
+                <span class="slider round"></span>
+              </label>
+            </td>
+          </tr>
+          <tr>
+            <td id="lbl_vibren"></td>
+            <td>
+              <label class="switch">
+                <input id="ck_vibren" type="checkbox">
+                <span class="slider round"></span>
+              </label>
+            </td>
+          </tr>
+          <tr><td class="tdtitle" colspan="2"></td></tr>
+        </table>
+      </div>
+
+      <!--------------->
+      <!--- Buttons --->
+      <!--------------->
+
+      <table style="border-spacing: 1vw; margin-left: auto; margin-right: auto;">
+        <tr><td colspan="2" style="text-align: center;">
+          <button id="bt_apply" class="button button1" onclick="SaveClick(false)">Apply</button>
+          <button id="bt_save"  class="button button2" onclick="SaveClick(true)">Save</button>
+        </td></tr>
+      </table>
+
+      <hr style="margin-bottom: 0px;">
+      <div align="center" style="font-size: 2vw; padding: 16px 0;">
+        &copy; <span id="year" style="font-size: 2vw;"></span> - Alessandro Pedretti
+      </div>
+    </div>
+  </body>
+</html>

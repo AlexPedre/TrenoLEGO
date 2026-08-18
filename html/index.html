@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TrenoLEGO</title>
+    <link rel="stylesheet" type="text/css" href="css/trenolego.css">
+    <link rel="stylesheet" type="text/css" href="css/toastpopup.css">
+    <link rel="icon" href="img/favicon.ico"/>
+
+    <script type="text/javascript" src="js/settings.js"   charset="utf-8"></script>
+    <script type="text/javascript" src="js/utils.js"      charset="utf-8"></script>
+    <script type="text/javascript" src="js/index.js"      charset="utf-8"></script>
+    <script type="text/javascript" src="js/manifest.js"   charset="utf-8"></script>
+    <script type="text/javascript" src="js/music.js"      charset="utf-8"></script>
+    <script type="text/javascript" src="js/toastpopup.js" charset="utf-8"></script>
+    <script type="text/javascript" src="js/vibration.js"  charset="utf-8"></script>
+    <script type="text/javascript" src="js/voice.js"      charset="utf-8"></script>
+  </head>
+
+  <body bgcolor="#d9d9d9" onload="Setup()">
+    <div id="page_loading">
+      <div class="loader"></div>
+      <p id="lbl_wait" align="center" style="font-size: 3vw;"></p>
+    </div>
+
+    <div id="page_main">
+      <div class="toptitle">
+        <span class="toptitle" style="color: red;">&#8694;&nbsp;</span>
+        <span class="toptitle" id="lbl_title">TrenoLEGO</span>
+        <span class="toptitle" style="color: red;">&nbsp;&#8649;</span>
+      </div>
+
+      <div class="subtitle1" style="margin-top: -7.5vw;">
+        <table width="100%">
+          <tr>
+            <td valign="bottom" style="text-align: left;">
+              <button id="bt_config" class="button_cfg" onclick="BT_ConfigClick();">
+                <img class="button_sndimg" src="img/settings.svg">
+              </button>
+              <button id="bt_music" class="button_cfg" onclick="MusicToggle();">
+                <img id="bt_musicimg" class="button_sndimg" src="img/music_off.svg">
+              </button>
+            </td>
+            <td valign="bottom" style="text-align: right; font-size: 1.5vw;">V
+              <span id="str_version" style="font-size: 1.5vw;">1.0.0</span>
+
+              <button id="bt_add" class="button_rcfg" onclick="BT_AddClick();">
+                <img class="button_sndimg" src="img/add.svg">
+              </button>
+            </td>
+          </tr>
+        </table>
+      </div>
+
+      <hr class="hrtop1">
+      <hr class="hrtop2">
+
+      <div class="batterybox" id="grp_batterybox">
+        <span id="lbl_battery" class="batterybox"></span><span id="str_capacity" class="tdinfoval">0</span>&#37
+      </div>
+
+      <table width="100%"><tr>
+        <td width="15%" style="vertical-align: top;">
+          <div id="sidebar" class="sndbar" align="center"></div>
+        </td>
+
+        <div id="toast-container"></div>
+        <div id="controller-container">
+          <div class="controller">
+            <img src="img/gamepad.png" width="100%">
+            <span>
+            
+            </span>
+          </div>
+        </div>
+
+        <td width="85%" style="vertical-align: top;">
+
+          <!------------------->
+          <!--- 4.5V train  --->
+          <!------------------->
+
+          <table id="train0" width="100%">
+            <tr><td id="lbl_name0" align="center" style="line-height: 7vw;">
+              4.5V train
+            </td></tr>
+            <tr>
+              <td widht="92%" valign="middle">
+                <input id="MotorSlider0" type="range" min="-255" max="255" value="0" class="motor"
+                  onchange="MotorChange(0, true)" oninput="MotorChange(0, false)" ondblclick="MotorStop(0)">
+                <div width="100%" align="right">
+                  <span id="MotorValue0" class="motorvalue"></span>
+                </div>
+              </td>
+              <td width="8%" align="right"><button id="bt_trainstop0" class="button_stop" onclick="MotorStop(0);">
+                <img class="button_sndimg" src="img/brake.svg">
+              </button></td>
+            </tr>
+          </table>
+
+          <!----------------------------->
+          <!--- PowerFunction train 1 --->
+          <!----------------------------->
+
+          <table id="train1" width="100%">
+            <tr><td id="lbl_name1" align="center" style="line-height: 7vw;">
+              PowerFunction train 1
+            </td></tr>
+            <tr>
+              <td widht="92%" valign="middle">
+                <input id="MotorSlider1" type="range" min="-255" max="255" value="0" class="motor"
+                  onchange="MotorChange(1, true)" oninput="MotorChange(1, false)" ondblclick="MotorStop(1)">
+                <div width="100%" align="right">
+                  <span id="MotorValue1" class="motorvalue"></span>
+                </div>
+              </td>
+              <td width="8%" align="right"><button id="bt_trainstop1" class="button_stop" onclick="MotorStop(1);">
+                <img class="button_sndimg" src="img/brake.svg">
+              </button></td>
+            </tr>
+          </table>
+
+          <!----------------------------->
+          <!--- PowerFunction train 2 --->
+          <!----------------------------->
+
+          <table id="train2" width="100%">
+            <tr><td id="lbl_name2" align="center" style="line-height: 7vw;">
+              PowerFunction train 2
+            </td></tr>
+            <tr>
+              <td widht="92%" valign="middle">
+                <input id="MotorSlider2" type="range" min="-255" max="255" value="0" class="motor"
+                  onchange="MotorChange(2, true)" oninput="MotorChange(2, false)" ondblclick="MotorStop(2)">
+                <div width="100%" align="right">
+                  <span id="MotorValue2" class="motorvalue"></span>
+                </div>
+              </td>
+              <td width="8%" align="right"><button id="bt_trainstop2" class="button_stop" onclick="MotorStop(2);">
+                <img class="button_sndimg" src="img/brake.svg">
+              </button></td>
+            </tr>
+          </table>
+
+          <!----------------------------->
+          <!--- PowerFunction train 3 --->
+          <!----------------------------->
+
+          <table id="train3" width="100%">
+            <tr><td id="lbl_name3" align="center" style="line-height: 7vw;">
+              PowerFunction train 3
+            </td></tr>
+            <tr>
+              <td widht="92%" valign="middle">
+                <input id="MotorSlider3" type="range" min="-255" max="255" value="0" class="motor"
+                  onchange="MotorChange(3, true)" oninput="MotorChange(3, false)" ondblclick="MotorStop(3)">
+                <div width="100%" align="right">
+                  <span id="MotorValue3" class="motorvalue"></span>
+                </div>
+              </td>
+              <td width="8%" align="right"><button id="bt_trainstop3" class="button_stop" onclick="MotorStop(3);">
+                <img class="button_sndimg" src="img/brake.svg">
+              </button></td>
+            </tr>
+          </table>
+
+          <!----------------------------->
+          <!--- PowerFunction train 4 --->
+          <!----------------------------->
+
+          <table id="train4" width="100%">
+            <tr><td id="lbl_name4" align="center" style="line-height: 7vw;">
+              PowerFunction train 4
+            </td></tr>
+            <tr>
+              <td widht="92%" valign="middle">
+                <input id="MotorSlider4" type="range" min="-255" max="255" value="0" class="motor"
+                  onchange="MotorChange(4, true)" oninput="MotorChange(4, false)" ondblclick="MotorStop(4)">
+                <div width="100%" align="right">
+                  <span id="MotorValue4" class="motorvalue"></span>
+                </div>
+              </td>
+              <td width="8%" align="right"><button id="bt_trainstop4" class="button_stop" onclick="MotorStop(4);">
+                <img class="button_sndimg" src="img/brake.svg">
+              </button></td>
+            </tr>
+          </table>
+
+          <div id="TrainContainer"></div>
+
+        </td>
+      </tr></table>
+
+      <hr style="margin-bottom: 0px;">
+      <div align="center" style="font-size: 2vw; padding: 16px 0;">
+        &copy; <span id="year" style="font-size: 2vw;"></span> - Alessandro Pedretti
+      </div>
+    </div>
+  </body>
+</html>
