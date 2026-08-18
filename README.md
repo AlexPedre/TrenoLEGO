@@ -26,9 +26,13 @@ The main features are:
 - **ESP32 S3 SuperMini or ESP32 C3 SuperMini Plus or NodeMCU 1.0**  
   The ESP32 C3 SuperMini Plus is preferred because it is small, inexpensive, and provides stable Wi-Fi and BLE connections. Moreover, the onboard connector allows an external antenna to be connected, extending the operating range. Although the ESP32 S3 SuperMini is more powerful than the C3 version (2 cores and additional PSRAM), it is affected by a poor board design that may result in an unstable connection due to the ceramic antenna being too close to the main chip. The NodeMCU, and ESP8266-based boards in general, do not support BLE and, for this reason, cannot emulate a *PowerUp* hub. Moreover, due to the limited amount of RAM, they cannot run all services at the same time (e.g., FTP, Telnet, MQTT, and Alexa/Hue emulation). For this reason, enable only the services you need.
 - **DRV8833 motor driver**
-- **Powerbank circuit board**  
-  This board must provide 5V as output with a current of 1-2A and the charge logic for the battery. Some boards sold on Aliexpress have a small trimmer to adjust the output voltage. If you want to power the *LEGO Power Functions* motors or their clones, you can increase the output up to 6.5V.
+- **Power bank circuit board**  
+  This board must provide a 5 V output with a current of 1–2 A and include the battery charging circuitry. Some boards sold on *AliExpress* have a small trimmer for adjusting the output voltage. If you want to power *LEGO Power Functions* motors or compatible clones, you can increase the output voltage up to 6.5 V.
   
   **WARNING:**  
-  Don't set a voltage greater than 6.5V or you burn the ESP32 regulator circuit. NodeMCU could be more tolerant, but it depends by the circuit design and the regulator type.
+  Do not set the voltage higher than 6.5 V, as this may damage the ESP32's voltage regulator circuit. The NodeMCU may tolerate higher voltages, but this depends on the specific board design and the type of voltage regulator used.
   
+- **1N4007 diode or equivalent**  
+  This diode is required to protect the MCU and the power bank board when the MCU's USB port is connected to an external power source. 
+- **18650 or 14500 3.7 V Li-ion battery**  
+  Choose the most suitable battery size according to the available space in the housing. The 18650 is inexpensive, widely available, and offers a high capacity (typically from 1500 to 3500 mAh), but it is relatively large. The 14500 battery is approximately the same size as a standard AA cell, making it suitable for smaller housings (e.g., the *LEGO 88000* 9 V battery box), but it has a lower capacity (typically from 500 to 1500 mAh).
