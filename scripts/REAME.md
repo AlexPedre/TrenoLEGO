@@ -49,3 +49,20 @@ Here you can find the scripts to build Html bundles, test the Html pages, upload
   ```
 - **server_multi.py**  
   it's the Python 3 web server used by *httptest.\** and *httptest-production.\** scripts.
+- **setwifi.cmd** (Windows version)
+- **setwifi.sh** (Linux version)  
+  set the WiFi *ssid* and *password* by telnet (telnet.exe command is not installed by default on Windows). To use these scripts, you must connect your PC to the *TrenoLEGO* WiFi (no autentication is required) and the telnet service must be enabled on the ESP.  
+  Usage for Linux:
+  ```bash
+  ./setwifi.sh <SSID> <PASSWORD>
+  ```
+  Usage for Windows:
+  ```cmd.exe
+  setwifi.cmd <SSID> <PASSWORD>
+  ```
+- **upload.py**  
+  since Windows *ftp* command doesn't support the passive mode required by the ftp server implemented in *TrenoLEGO*, a Python 3 script was devoleped to upload all bundles and media files to the ESP file system. User name and password must be defined in *credentials.py* file. This script can be used both on Linux and Windows.
+- **upload.sh** (Linux version)  
+  uploads all bundles and media files to the ESP file system, by using the *ftp* command. User name and password must be defined in *credentials.sh*
+- **upload_index.sh** (Linux version)
+  uploads only the *index.html.gz* file. This script is useful for debug. 
