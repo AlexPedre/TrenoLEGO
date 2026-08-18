@@ -1,2 +1,2 @@
 # *data/Html/mus* directory
-This directory contains MIDI files.
+This directory contains *MIDI* files.
