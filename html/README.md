@@ -5,6 +5,8 @@ Here is the directory tree description:
 
 - **/**  
   root of the directory. It contains the *Html* files.
+- **css**  
+  stylesheet directory.
 - **img**  
   image directory. It includes images in *ico*, *svg* and *png* formats.
 - **js**  
