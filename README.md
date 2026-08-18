@@ -36,3 +36,5 @@ The main features are:
   This diode is required to protect the MCU and the power bank board when the MCU's USB port is connected to an external power source. 
 - **18650 or 14500 3.7 V Li-ion battery**  
   Choose the most suitable battery size according to the available space in the housing. The 18650 is inexpensive, widely available, and offers a high capacity (typically from 1500 to 3500 mAh), but it is relatively large. The 14500 battery is approximately the same size as a standard AA cell, making it suitable for smaller housings (e.g., the *LEGO 88000* 9 V battery box), but it has a lower capacity (typically from 500 to 1500 mAh).
+- **IR module** (optional)  
+  This module is required if you want to control other *Power Functions* trains from the same web app provided by the MCU that directly controls the motor through the motor driver.
