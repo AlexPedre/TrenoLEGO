@@ -23,5 +23,12 @@ The main features are:
 - Speech synthesis.
 
 ## 2. Hardware requirements
-- An ESP32 S3 SuperMini or ESP32 C3 SuperMini Plus or NodeMCU 1.0.  
-  ESP32 C3 SuperMini Plus is preferred because it's small, cheap, and makes stable WiFi and BLE connections. Moreover, the connector present on its board allows to connect anexternal antenna, extending the operation range. Although ESP32 S3 SuperMini is more powerful (2 cores and additional PSRAM) if compared to the C3 version, is affected by a bad board design that doesn't permit stable connection due to the ceramic antenna too close to the main chip. NodeMCU or more in general ESP8266 doesn't have BLE support and, for this reason, cannot emulate a *PowerUp* hub. Moreover, due to the limited quantity of RAM, it cannot run all te services at the same time (e.g. ftp, telnet, MQTT and Alexa/Hue emulation). For this reason, enable only the services that you need.  
+- **ESP32 S3 SuperMini or ESP32 C3 SuperMini Plus or NodeMCU 1.0**  
+  The ESP32 C3 SuperMini Plus is preferred because it is small, inexpensive, and provides stable Wi-Fi and BLE connections. Moreover, the onboard connector allows an external antenna to be connected, extending the operating range. Although the ESP32 S3 SuperMini is more powerful than the C3 version (2 cores and additional PSRAM), it is affected by a poor board design that may result in an unstable connection due to the ceramic antenna being too close to the main chip. The NodeMCU, and ESP8266-based boards in general, do not support BLE and, for this reason, cannot emulate a *PowerUp* hub. Moreover, due to the limited amount of RAM, they cannot run all services at the same time (e.g., FTP, Telnet, MQTT, and Alexa/Hue emulation). For this reason, enable only the services you need.
+- **DRV8833 motor driver**
+- **Powerbank circuit board**  
+  This board must provide 5V as output with a current of 1-2A and the charge logic for the battery. Some boards sold on Aliexpress have a small trimmer to adjust the output voltage. If you want to power the *LEGO Power Functions* motors or their clones, you can increase the output up to 6.5V.
+  
+  **WARNING:**  
+  Don't set a voltage greater than 6.5V or you burn the ESP32 regulator circuit. NodeMCU could be more tolerant, but it depends by the circuit design and the regulator type.
+  
