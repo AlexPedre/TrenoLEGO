@@ -1,5 +1,5 @@
 # *html/css* directory
-Stylesheet directory.
+This directory includes the following stylesheets:
 - **toastpopup.css**  
   stylesheet for popups.
 - **trenolego.css**  
