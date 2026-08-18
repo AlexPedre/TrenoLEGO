@@ -1,0 +1,65 @@
+
+/**************************************
+****  TrenoLEGO - Toast popup CSS  ****
+**** (c) 2026, Alessandro Pedretti ****
+**************************************/
+
+
+#controller-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9998;
+  pointer-events: none;
+  aspect-ratio: 16 / 9;
+  width: min(90vw, 90vh * (16 / 9));
+  height: min(90vh, 90vw / (16 / 9));
+}
+
+.controller {
+  background-color: rgba(255, 255, 255, 0.85);
+  color: white;
+  padding: 15px 25px;
+  border-radius: 10px;
+  font-family: sans-serif;
+  font-size: 1.1rem;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  border: 1px solid #000000;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.controller.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#toast-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  pointer-events: none;
+}
+
+.toast {
+  background-color: rgba(0, 0, 0, 0.85);
+  color: white;
+  padding: 15px 25px;
+  border-radius: 10px;
+  font-family: sans-serif;
+  font-size: 1.1rem;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  border: 1px solid #000000;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  min-width: 200px;
+}
+
+.toast.show {
+  opacity: 1;
+}
