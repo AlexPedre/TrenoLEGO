@@ -1,4 +1,4 @@
-# data/Html directory
+# *data/Html* directory
 This directory includes bundles and media files. Here is the directory tree description:
 - **/**  
   root of the directory. It contains both *gzipped-* and *not-gizziped-* bundles. Only the former must be copyed into the
