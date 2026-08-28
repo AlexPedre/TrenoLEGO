@@ -70,8 +70,36 @@ All the hardware components were purchased from *AliExpress*. Pictures of the va
   Do not set the voltage higher than 6.5 V, as this may damage the ESP32's voltage regulator circuit. The NodeMCU may tolerate higher voltages, but this depends on the specific board design and the type of voltage regulator used.
   
 - **1N4007 diode or equivalent**  
-  This diode is required to protect the MCU and the power bank board when the MCU's USB port is connected to an external power source. 
+  This diode is required to protect the MCU and the power bank board when the MCU's USB port is connected to an external power source.
+  <table align="center">
+   <tr>
+    <td align="center"><img src="images/hardware/1n4007.jpg" alt="1N4007 diode" width="200"></td>
+   </tr>
+   <tr>
+    <td align="center">1N4007 diode</td>
+   </tr>
+  </table>
+  
 - **18650 or 14500 3.7 V Li-ion battery**  
   Choose the most suitable battery size according to the available space in the housing. The 18650 is inexpensive, widely available, and offers a high capacity (typically from 1500 to 3500 mAh), but it is relatively large. The 14500 battery is approximately the same size as a standard AA cell, making it suitable for smaller housings (e.g., the *LEGO 88000* 9 V battery box), but it has a lower capacity (typically from 500 to 1500 mAh).
+  <table align="center">
+   <tr>
+    <td align="center"><img src="images/hardware/battery_18650.jpg" alt="18650" width="200"></td>
+    <td align="center"><img src="images/hardware/battery_14500.jpg" alt="14500" width="200"></td>
+   </tr>
+   <tr>
+    <td align="center">18650 battery</td>
+    <td align="center">14500 battery</td>
+   </tr>
+  </table>
+  
 - **IR module** (optional)  
   This module is required if you want to control other *Power Functions* trains from the same web app provided by the MCU that directly controls the motor through the motor driver.
+  <table align="center">
+   <tr>
+    <td align="center"><img src="images/hardware/ir_pcb0100.jpg" alt="IR transmitter board PCB0100" width="200"></td>
+   </tr>
+   <tr>
+    <td align="center">IR transmitter board PCB0100</td>
+   </tr>
+  </table>
