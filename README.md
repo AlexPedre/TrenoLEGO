@@ -42,15 +42,30 @@ All the hardware components were purchased from *AliExpress*. Pictures of the va
 
 - **DRV8833 motor driver**
   This compact motor driver can handle a maximum current of 1.5 A and features two independent channels for controlling two motors.
-
-  
-  <p align="center">
-    <img src="images/hardware/drv8833.jpg" alt="DRV8833" width="300">
-  </p>
+  <table align="center">
+   <tr>
+    <td align="center"><img src="images/hardware/drv8833.jpg" alt="DRV8833" width="200"></td>
+   </tr>
+   <tr>
+    <td align="center">DRV8233dual channel motor driver</td>
+   </tr>
+  </table>
   
 - **Power bank circuit board**  
   This board must provide a 5 V output with a current of 1–2 A and include the battery charging circuitry. Some boards sold on *AliExpress* have a small trimmer for adjusting the output voltage. If you want to power *LEGO Power Functions* motors or compatible clones, you can increase the output voltage up to 6.5 V.
-  
+  <table align="center">
+   <tr>
+    <td align="center"><img src="images/hardware/pwr_mod_5v3a.jpg" alt="Fixed 5V 2A board" width="200"></td>
+    <td align="center"><img src="images/hardware/pwr_mod_5-9v2a_2.jpg" alt="5 to 9V adjustable power & charger" width="200"></td>
+    <td align="center"><img src="images/hardware/pwr_mod_5-9v2a_1.jpg" alt="Smaller version on the previous module" width="200"></td>
+   </tr>
+   <tr>
+    <td align="center">Fixed 5V 2A board. Perfect to power old 4,5V motors</td>
+    <td align="center">5 to 9V adjustable power & charger. This board is perfect to be inserted into 88000 battery holder</td>
+    <td align="center">Smaller version on the previous module. Perfect for super-small projects</td>
+   </tr>
+  </table>
+    
   **WARNING:**  
   Do not set the voltage higher than 6.5 V, as this may damage the ESP32's voltage regulator circuit. The NodeMCU may tolerate higher voltages, but this depends on the specific board design and the type of voltage regulator used.
   
