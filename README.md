@@ -27,12 +27,23 @@ All the hardware components were purchased from *AliExpress*. Pictures of the va
 
 - **ESP32 S3 SuperMini or ESP32 C3 SuperMini Plus or NodeMCU 1.0**  
   The ESP32 C3 SuperMini Plus is preferred because it is small, inexpensive, and provides stable Wi-Fi and BLE connections. Moreover, the onboard connector allows an external antenna to be connected, extending the operating range. Although the ESP32 S3 SuperMini is more powerful than the C3 version (2 cores and additional PSRAM), it is affected by a poor board design that may result in an unstable connection due to the ceramic antenna being too close to the main chip. The NodeMCU, and ESP8266-based boards in general, do not support BLE and, for this reason, cannot emulate a *PowerUp* hub. Moreover, due to the limited amount of RAM, they cannot run all services at the same time (e.g., FTP, Telnet, MQTT, and Alexa/Hue emulation). For this reason, enable only the services you need.
-  <p align="center">
-    <img src="images/hardware/esp32_c3_supermini_plus.jpg" alt="ESP32 C3 SuperMini Plus" width="300">
-    <img src="images/hardware/esp32_s3_supermini.jpg" alt="ESP32 S3 SuperMini" width="300">
-  </p>
+  <table align="center">
+   <tr>
+    <td align="center"><img src="images/hardware/esp32_c3_supermini_plus.jpg" alt="ESP32 C3 SuperMini Plus" width="200"></td>
+    <td align="center"><img src="images/hardware/esp32_s3_supermini.jpg" alt="ESP32 S3 SuperMini" width="200"></td>
+    <td align="center"><img src="images/hardware/node_mcu.jpg" alt="Node MCU ESP8266" width="200"></td>
+   </tr>
+   <tr>
+    <td align="center">ESP32 C3 SuperMini Plus</td>
+    <td align="center">ESP32 S3 SuperMini</td>
+    <td align="center">Node MCU ESP8266</td>
+   </tr>
+  </table>
+
 - **DRV8833 motor driver**
   This compact motor driver can handle a maximum current of 1.5 A and features two independent channels for controlling two motors.
+
+  
   <p align="center">
     <img src="images/hardware/drv8833.jpg" alt="DRV8833" width="300">
   </p>
