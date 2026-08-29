@@ -202,7 +202,8 @@ The following libraries are required to build the project:
 - SimpleFTPServer 3.0.2 (change in FtpServerKey.h to #define DEFAULT_STORAGE_TYPE_ESP32 STORAGE_LITTLEFS)
 
 **Patches for all ESP32**
-Edit the *FtpServerKey.h* file 
+Edit the *FtpServerKey.h* file in the *~/Arduino/libraries/SimpleFTPServer/*
+
 **Patches specific for ESP32 C3**  
 In *patches* directory there are patched files of libraries and SDK for **ESP32 C3** target.
 - **error_constants.h**  
