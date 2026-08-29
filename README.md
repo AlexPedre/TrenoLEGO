@@ -68,23 +68,6 @@ All the hardware components were purchased from *AliExpress*. Pictures of the va
     
   **WARNING:**  
   Do not set the voltage higher than 6.5 V, as this may damage the ESP32's voltage regulator circuit. The NodeMCU may tolerate higher voltages, but this depends on the specific board design and the type of voltage regulator used.
-
-- **Battery holder/box** (optional)  
-  A battery holder is required if you intend to use batteries without solder tabs. One interesting solution is to buy an inexpensive battery box compatible with the *LEGO 88000*. It includes an electronic switch that can be used to turn the MCU on and off, as well as enough space to accommodate one or two 14500 cells. This is probably the best choice if you want a full-size, LEGO-compatible battery box without the need for 3D printing.  
-  Another interesting option is to use three AA-to-C battery adapters, which fit inside the old *LEGO 161 battery wagon* in place of the original C batteries. The three adapters can be used to house the 14500 battery, the ESP32 C3 SuperMini, and the power board, respectively. This makes it possible to convert the old *LEGO 161 battery wagon* into a modern, self-contained hub without making any permanent modifications to the original LEGO part.
-  
-  <table align="center">
-   <tr>
-    <td align="center"><img src="images/hardware/battery_holder_18650.jpg" alt="Battery holder for 18650 cell" width="200"></td>
-    <td align="center"><img src="images/hardware/battery_holder_88000.jpg" alt="Battery box compatible with LEGO 88000" width="200"></td>
-    <td align="center"><img src="images/hardware/aa_to_c_adapter.jpg" alt="AA to C battery adapter" width="200"></td>
-   </tr>
-   <tr>
-    <td align="center">Battery holder for 18650 cell</td>
-    <td align="center">Battery box compatible with LEGO 88000</td>
-    <td align="center">AA to C battery adapter. Three of these adapters can fit inside the old LEGO 161 battery vagon</td>
-   </tr>
-  </table>
   
 - **1N4007 diode or equivalent**  
   This diode is required to protect the MCU and the power bank board when the MCU's USB port is connected to an external power source.
@@ -107,6 +90,23 @@ All the hardware components were purchased from *AliExpress*. Pictures of the va
    <tr>
     <td align="center">18650 battery</td>
     <td align="center">14500 battery</td>
+   </tr>
+  </table>
+
+- **Battery holder/box** (optional)  
+  A battery holder is required if you intend to use batteries without solder tabs. One interesting solution is to buy an inexpensive battery box compatible with the *LEGO 88000*. It includes an electronic switch that can be used to turn the MCU on and off, as well as enough space to accommodate one or two 14500 cells. This is probably the best choice if you want a full-size, LEGO-compatible battery box without the need for 3D printing.  
+  Another interesting option is to use three AA-to-C battery adapters, which fit inside the old *LEGO 161 battery wagon* in place of the original C batteries. The three adapters can be used to house the 14500 battery, the ESP32 C3 SuperMini, and the power board, respectively. This makes it possible to convert the old *LEGO 161 battery wagon* into a modern, self-contained hub without making any permanent modifications to the original LEGO part.
+  
+  <table align="center">
+   <tr>
+    <td align="center"><img src="images/hardware/battery_holder_18650.jpg" alt="Battery holder for 18650 cell" width="200"></td>
+    <td align="center"><img src="images/hardware/battery_holder_88000.jpg" alt="Battery box compatible with LEGO 88000" width="200"></td>
+    <td align="center"><img src="images/hardware/aa_to_c_adapter.jpg" alt="AA to C battery adapter" width="200"></td>
+   </tr>
+   <tr>
+    <td align="center">Battery holder for 18650 cell</td>
+    <td align="center">Battery box compatible with LEGO 88000</td>
+    <td align="center">AA to C battery adapter. Three of these adapters can fit inside the old LEGO 161 battery vagon</td>
    </tr>
   </table>
   
