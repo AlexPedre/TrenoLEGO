@@ -2,9 +2,12 @@
 Advanced Hub for old (4.5V) and modern LEGO trains
 
 <p align="center">
-  <img src="images/models/lego_171_161.jpg" alt="Old LEGO 171 with motor 103-1, tender 161 and TrenoLEGO hub" width="200">
-  <img src="images/models/lego_133.jpg" alt="Old LEGO 133 with motor 103-1, custom tender and TrenoLEGO hub" width="200">
-  <img src="images/models/lego_60511.jpg" alt="LEGO 60511 with motor 88002, TrenoLEGO hub" width="200">
+  <img src="images/models/lego_171_161.jpg" alt="Old LEGO 171 with motor 103-1, tender 161 and TrenoLEGO hub" width="300">
+  <img src="images/models/lego_133.jpg" alt="Old LEGO 133 with motor 103-1, custom tender and TrenoLEGO hub" width="300">
+</p>
+<p align="center">
+  <img src="images/models/lego_60511.jpg" alt="LEGO 60511 with motor 88002, TrenoLEGO hub" width="300">
+  <img src="images/models/lego_10361.jpg" alt="LEGO 10361 with motor 88002, TrenoLEGO hub" width="300">
 </p>
 
 ## 1. Introduction  
