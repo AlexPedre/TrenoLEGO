@@ -130,9 +130,29 @@ All the hardware components were purchased from *AliExpress*. Pictures of the va
     <td align="center">100 KOhm</td>
    </tr>
   </table>
+
+  <table align="center">
+   <tr>
+    <td align="center"><img src="images/hardware/capacitor_100nf_ceramic.jpg" alt="100 nF ceramic capacitor" width="120"></td>
+    <td align="center"><img src="images/hardware/capacitor_100nf_polyester.jpg" alt="100 nF polyester capacitor" width="120"></td>
+   </tr>
+   <tr>
+    <td align="center">100 nF ceramic capacitor</td>
+    <td align="center">100 nF polyester capacitor</td>
+   </tr>
+  </table>
   
   A 100 nF capacitor (ceramic or polyester), connected between the junction of the two resistors and the negative terminal of the battery, is used to stabilize the ADC reading by filtering out voltage fluctuations and electrical noise.
-  
+  <table align="center">
+   <tr>
+    <td align="center"><img src="images/hardware/resistor_100k.jpg" alt="100 Kohm resistor 1/4 W 5%" width="120"></td>
+    <td align="center"><img src="images/hardware/resistor_390k.jpg" alt="390 Kohm resistor 1/4 W 5%" width="120"></td>
+   </tr>
+   <tr>
+    <td align="center">100 Kohm resistor 1/4 W 5%</td>
+    <td align="center">390 Kohm resistor 1/4 W 5%</td>
+   </tr>
+  </table>
 - **IR module** (optional)  
   This module is required if you want to control other *Power Functions* trains from the same web app provided by the MCU that directly controls the motor through the motor driver.
   <table align="center">
