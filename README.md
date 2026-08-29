@@ -109,6 +109,28 @@ All the hardware components were purchased from *AliExpress*. Pictures of the va
     <td align="center">AA to C battery adapter. Three of these adapters can fit inside the old LEGO 161 battery vagon</td>
    </tr>
   </table>
+
+- **Resistors & capacitor** (optional)  
+  Two resistors and one capacitor are required to implement a software-based BMS (Battery Monitoring System). In detail, the two resistors connected in series between the two poles of the battery in order to reduce the tension in the range readable by the ADC (Analog to Digital Converter) converter of the MCU. The values required can differ according to the type of ADC/MCU as shown in the following table:
+  <table align="center">
+   <tr>
+    <td><b>MCU</b></td>
+    <td align="center"><b>R1</b></td>
+    <td align="center"><b>R2</b></td>
+   </tr>
+   <tr>
+    <td>ESP32 C3/S3</td>
+    <td align="center">100 KOhm</td>
+    <td align="center">100 KOhm</td>
+   </tr>
+   <tr>
+    <td>ESP 8266</td>
+    <td align="center">320 KOhm</td>
+    <td align="center">100 KOhm</td>
+   </tr>
+  </table>
+  
+  The capacitor of 100 nF (ceramic or polyester) connected between, the junction of the two resistors and the negative pole of the battery, is required to make more stable the reading reducing the tension fluctuation.
   
 - **IR module** (optional)  
   This module is required if you want to control other *Power Functions* trains from the same web app provided by the MCU that directly controls the motor through the motor driver.
