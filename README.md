@@ -111,7 +111,8 @@ All the hardware components were purchased from *AliExpress*. Pictures of the va
   </table>
 
 - **Resistors & capacitor** (optional)  
-  Two resistors and one capacitor are required to implement a software-based BMS (Battery Monitoring System). In detail, the two resistors connected in series between the two poles of the battery in order to reduce the tension in the range readable by the ADC (Analog to Digital Converter) converter of the MCU. The values required can differ according to the type of ADC/MCU as shown in the following table:
+  Two resistors (1/4 W, 5%) and one capacitor are required to implement a software-based *BMS* (Battery Monitoring System). More specifically, the two resistors are connected in series between the battery terminals to form a voltage divider, reducing the battery voltage to a level that can be safely measured by the MCU's *ADC* (Analog-to-Digital Converter). The required resistor values may vary depending on the MCU and its ADC characteristics, as shown in the following table:
+  
   <table align="center">
    <tr>
     <td><b>MCU</b></td>
@@ -130,7 +131,7 @@ All the hardware components were purchased from *AliExpress*. Pictures of the va
    </tr>
   </table>
   
-  The capacitor of 100 nF (ceramic or polyester) connected between, the junction of the two resistors and the negative pole of the battery, is required to make more stable the reading reducing the tension fluctuation.
+  A 100 nF capacitor (ceramic or polyester), connected between the junction of the two resistors and the negative terminal of the battery, is used to stabilize the ADC reading by filtering out voltage fluctuations and electrical noise.
   
 - **IR module** (optional)  
   This module is required if you want to control other *Power Functions* trains from the same web app provided by the MCU that directly controls the motor through the motor driver.
