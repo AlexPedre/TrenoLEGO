@@ -201,5 +201,17 @@ The following libraries are required to build the project:
 - PubSubClient 2.8.0
 - SimpleFTPServer 3.0.2 (change in FtpServerKey.h to #define DEFAULT_STORAGE_TYPE_ESP32 STORAGE_LITTLEFS)
 
-**Patches**  
-If your target is ESP32, 
+**Patches for all ESP32**
+Edit the *FtpServerKey.h* file 
+**Patches specific for ESP32 C3**  
+In *patches* directory there are patched files of libraries and SDK for **ESP32 C3** target.
+- **error_constants.h**  
+  copy this file to *~/Arduino15/packages/esp32/tools/riscv32-esp-elf-gcc/esp-2021r2-patch5-8.4.0/riscv32-esp-elf/include/c++/8.4.0/bits*.
+- **LegoinoCommon.h**  
+  copy this file to *~/Arduino/libraries/Legoino/src*.
+
+For Linux:
+```bash
+cp error_constants.h ~/Arduino15/packages/esp32/tools/riscv32-esp-elf-gcc/esp-2021r2-patch5-8.4.0/riscv32-esp-elf/include/c++/8.4.0/bits
+cp LegoinoCommon.h ~/Arduino/libraries/Legoino/src
+```
