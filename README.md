@@ -1,5 +1,11 @@
 # TrenoLEGO
-LEGO Hub for old 4.5V, Power Functions trains &amp; more
+Advanced Hub for old (4.5V) and modern LEGO trains
+
+<p align="center">
+  <img src="images/models/lego_171_161.jpg" alt="Old LEGO 171 with motor 103-1, tender 161 and TrenoLEGO hub" width="200">
+  <img src="images/models/lego_133.jpg" alt="Old LEGO 133 with motor 103-1, custom tender and TrenoLEGO hub" width="200">
+  <img src="images/models/lego_60511.jpg" alt="LEGO 60511 with motor 88002, TrenoLEGO hub" width="200">
+</p>
 
 ## 1. Introduction  
 *TrenoLEGO* was developed initially with the aim to create a complete LEGO hub for vintage 4.5V trains, but can also used to build
