@@ -175,3 +175,31 @@ All the hardware components were purchased from *AliExpress*. Pictures of the va
     <td align="center">IR transmitter board PCB0100</td>
    </tr>
   </table>
+  
+## 3. Software requirements
+To develop *TrenoLEGO*, I used *Arduino IDE* 1.8.19 rather than version 2.x, as the latest releases are too resource-intensive to run efficiently on my Chromebook using the Linux environment (*Crostini*). However, feel free to use a newer version of the *Arduino IDE* or any other compatible development environment.
+
+The following libraries are required to build the project:
+
+**For ESP32 C3 and S3:**
+- ESP32 2.0.11
+- Async TCP 2.0.0
+- Legoino 1.1.0
+- NimBLE Arduino 1.4.3
+
+**For NodeMCU/ESP8266:**
+- ESP8266 3.1.2 (only for ESP8266)
+
+**For all targets:**
+- ArduinoJSON 7.4.3
+- CommandParser 1.1.1
+- ESP_Async_TCP 3.4.10
+- ESP_Async_WebServer 3.10.3
+- SP_Telnet 2.2.3
+- FauxmoESP 3.4.1
+- IRremoteESP8266 2.9.0
+- PubSubClient 2.8.0
+- SimpleFTPServer 3.0.2 (change in FtpServerKey.h to #define DEFAULT_STORAGE_TYPE_ESP32 STORAGE_LITTLEFS)
+
+**Patches**  
+If your target is ESP32, 
