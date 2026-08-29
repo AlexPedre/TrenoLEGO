@@ -191,6 +191,14 @@ The following schematics show how to connect and wire the different components.
   <img src="images/schematics/ESP32-C3.svg" alt="Schematics for ESP32-C3 SuperMini" width="100%">
 </p>
 
+<p align="center">
+  <img src="images/schematics/ESP32-S3.svg" alt="Schematics for ESP32-S3 SuperMini" width="100%">
+</p>
+
+<p align="center">
+  <img src="images/schematics/NodeMCU.svg" alt="Schematics for NodeMCU" width="100%">
+</p>
+
 ## 4. Software requirements
 To develop *TrenoLEGO*, I used *Arduino IDE* 1.8.19 rather than version 2.x, as the latest releases are too resource-intensive to run efficiently on my Chromebook using the Linux environment (*Crostini*). However, feel free to use a newer version of the *Arduino IDE* or any other compatible development environment.
 
