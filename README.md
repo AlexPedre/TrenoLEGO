@@ -110,6 +110,9 @@ All the hardware components were purchased from *AliExpress*. Pictures of the va
    </tr>
   </table>
 
+- **Switches**
+  Two switches are required: the first is used to turn the hub on and off, while the second allows you to switch between *PoweredUp* and Advanced Hub modes. You can reuse the electronic switch included in a *LEGO 88000-compatible battery box*, as it also works perfectly with the ~4 V supplied by the Li-ion battery.  When the battery box is very small, or you prefer not to add an external switch to select the operating mode (e.g., when using a *LEGO 88000-compatible* battery box), you can use a mercury tilt switch instead. Since the state of this switch is checked only when the MCU starts up, you can select *PoweredUp* mode simply by tilting the battery box while pressing the power button.  
+ 
 - **Resistors & capacitor** (optional)  
   Two resistors (1/4 W, 5%) and one capacitor are required to implement a software-based *BMS* (Battery Monitoring System). More specifically, the two resistors are connected in series between the battery terminals to form a voltage divider, reducing the battery voltage to a level that can be safely measured by the MCU's *ADC* (Analog-to-Digital Converter). The required resistor values may vary depending on the MCU and its ADC characteristics, as shown in the following table:
   
