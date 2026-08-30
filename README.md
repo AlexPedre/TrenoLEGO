@@ -282,6 +282,7 @@ bla, bla, bla...
 ## 6. Configuration & usage
 After the installation of the firmware, the copy of the system files and the wifi configuration you can explore the *graphic user interface* (GUI) of the web app just typing in your browser: http://trenolego  
 The main page will be:
+  
 <table>
   <tr>
     <td valign="top">
@@ -346,7 +347,26 @@ Finally, in the <i>Other settings</i> section, you can enable or disable <i>Debu
   </tr>
 </table>
 
-You can apply the settings temporarily or save them permanently by clicking the *Apply* and *Save* buttons, respectively.
+You can apply the settings temporarily or save them permanently by clicking the *Apply* and *Save* buttons, respectively.  
+  
+Clicking the *arrow-up* button, you open the **Firmware update** page:
+
+<table>
+  <tr>
+    <td valign="top">
+      <img src="images/gui/update.png" alt="Firmware update">
+    </td>
+    <td valign="top">
+      <b>Firmware update</b><br>
+From this page, you can update the hub firmware via OTA. Select the firmware file and click the <i>Update</i> button to start the update process. Once the update is successfully completed, the browser is automatically redirected to the main control page.<br><br>
+<b>WARNINGS:</b><br>
+      <ul>
+       <li>If the firmware update fails, you may need to reinstall the firmware via a USB connection.</li>
+       <li>When installing a new firmware version, the files stored in the file system should also be updated. See the previous section for instructions.</li>
+      </ul>
+    </td>
+  </tr>
+</table>
 
 ## 7. To do
 - Step-by-step guide to insert all components into *88000-compatible* hub.
