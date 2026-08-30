@@ -298,7 +298,7 @@ If you connect a <i>Bluetooth controller</i> to the device running the web brows
   </tr>
 </table>
   
-Clicking the *gears* button, you open the configuration page:
+Clicking the *gears* button, you open the **Configuration** page:
   
 <table>
   <tr>
@@ -306,20 +306,17 @@ Clicking the *gears* button, you open the configuration page:
       <img src="images/gui/config1.png" alt="Configuration - Network">
     </td>
     <td valign="top">
-      <b>Configuration - Network</b><br>
+      <b>Network tab</b><br>
 Here you can modify the <i>Host name</i> and Wi-Fi settings (<i>SSID</i> and <i>Password</i>), as well as enable or disable services such as <i>FTP</i> (required to update the GUI files), <i>Telnet</i> (which provides access to the remote console for debugging the firmware and changing settings), and <i>MQTT</i>. For the MQTT service, you can also configure the <i>Server</i>, <i>TCP port</i> (default: 1883), <i>User name</i>, and <i>Password</i>.<br>
 Finally, you can configure the <i>Network time</i> settings (<i>Server</i> and <i>Time zone</i>), which are used to synchronize the MCU's internal clock and set the correct local time.
     </td>
   </tr>
-</table>
-
-<table>
   <tr>
     <td valign="top">
       <img src="images/gui/config1.png" alt="Configuration - Trains">
     </td>
     <td valign="top">
-      <b>Configuration - Trains</b><br>
+      <b>Trains tab</b><br>
 In the <i>Trains</i> tab, you can configure the trains controlled by the hub. Five channels are available, numbered from 0 to 4. Channel 0 is reserved for the train whose motor is directly connected to the hub's motor driver. Channels 1 to 4 can be assigned to additional trains controlled via IR using the <i>Power Functions</i> protocol. Keep in mind that <i>Power Functions</i> trains can only be controlled if your hub is equipped with an IR module (e.g., PCB0100).<br>
 Each channel/train can be enabled or disabled independently. For each train, you can invert the motor slider direction (<i>Invert direction</i>), specify the train <i>Name</i>, and define the alternative name used by <i>Alexa</i> to control the train in the opposite direction (<i>Name reverse</i>). You can also fine-tune the acceleration and braking behavior using the <i>Acc. amount</i> and <i>Acc. step time (ms)</i> parameters, providing smoother and more realistic speed changes when the motor slider is moved.
     </td>
