@@ -333,7 +333,20 @@ For <i>Power Functions</i> channels/trains, you can also select the <i>Port</i> 
 In this tab, you can configure the <i>Powered Up emulation</i> settings. You can define the behavior of the <i>mode switch</i> (<i>Default enabled</i>), select the <i>Emulated port</i> (<i>A</i> or <i>B</i>), and bind the emulated port to a specific train channel. In particular, <i>Powered Up emulation</i> can also be enabled for <i>Power Functions</i> trains, effectively creating a Bluetooth LE-to-IR bridge that allows them to be controlled as if they were <i>Powered Up</i> devices.
     </td>
   </tr>
+
+  <tr>
+    <td valign="top">
+      <img src="images/gui/config4.png" alt="Configuration - Others">
+    </td>
+    <td valign="top">
+      <b>Others tab</b><br>
+In the <i>Others</i> tab, you can change the <i>Administrator credentials</i> (<i>User name</i> and <i>Password</i>), which are required to access the configuration tabs and the <i>FTP</i> and <i>Telnet</i> services. You can also enable or disable <i>Power saving</i> and configure the corresponding inactivity timeout (<i>Delay (sec.)</i>), after which the system enters suspend mode. To resume the hub after suspension, you must turn it off and then back on.<br>
+Finally, in the <i>Other settings</i> section, you can enable or disable <i>Debug mode</i>, <i>Hue/Alexa emulation</i>, <i>Speech synthesis</i> provided by the web browser, and haptic feedback for both the device running the web app and the gamepad.
+    </td>
+  </tr>
 </table>
+
+You can apply the settings temporarily or save them permanently by clicking the *Apply* and *Save* buttons, respectively.
 
 ## 7. To do
 - Step-by-step guide to insert all components into *88000-compatible* hub.
