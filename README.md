@@ -223,8 +223,8 @@ Here are examples of hubs built by me:
    </tr>
    <tr>
     <td align="center">The hub inside a custom vintage tender.</td>
-    <td align="center">Hole for USB-C connector to charge the battery.</td>
-    <td align="center">18650 battery and PCB0100 IR board. All parts are fixed by tape.</td>
+    <td align="center">The hole for USB-C connector to charge the battery.</td>
+    <td align="center">The hole for the IR LEDs controlling <i>Power Functions</i> trains.</td>
    </tr>
 </table>
 
