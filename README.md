@@ -313,6 +313,19 @@ Finally, you can configure the <i>Network time</i> settings (<i>Server</i> and <
   </tr>
 </table>
 
+<table>
+  <tr>
+    <td valign="top">
+      <img src="images/gui/config1.png" alt="Configuration - Trains">
+    </td>
+    <td valign="top">
+      <b>Configuration - Trains</b><br>
+In the <i>Trains</i> tab, you can configure the trains controlled by the hub. Five channels are available, numbered from 0 to 4. Channel 0 is reserved for the train whose motor is directly connected to the hub's motor driver. Channels 1 to 4 can be assigned to additional trains controlled via IR using the <i>Power Functions</i> protocol. Keep in mind that <i>Power Functions</i> trains can only be controlled if your hub is equipped with an IR module (e.g., PCB0100).<br>
+Each channel/train can be enabled or disabled independently. For each train, you can invert the motor slider direction (<i>Invert direction</i>), specify the train <i>Name</i>, and define the alternative name used by <i>Alexa</i> to control the train in the opposite direction (<i>Name reverse</i>). You can also fine-tune the acceleration and braking behavior using the <i>Acc. amount</i> and <i>Acc. step time (ms)</i> parameters, providing smoother and more realistic speed changes when the motor slider is moved.
+    </td>
+  </tr>
+</table>
+
 ## 7. To do
 - Step-by-step guide to insert all components into *88000-compatible* hub.
 - Automatic recognition of the trains in the local net. In this way, you can control all the trains from the same web-app.
