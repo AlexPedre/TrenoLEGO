@@ -289,7 +289,10 @@ The main page will be:
     </td>
     <td valign="top">
 At the top, three yellow buttons are displayed. Click the <i>gears</i> button to open the settings page (see below). Click the <i>speaker</i> button to turn the background music on or off. Click the <i>train</i> button to manually add other <i>TrenoLEGO</i> hubs by specifying their host name or IP address.<br>
-The blue buttons can be used to play seven different sound effects. Use the sliders to control the speed and direction of each train. The red brake buttons stop the corresponding train.
+The blue buttons can be used to play seven different sound effects. Use the sliders to control the speed and direction of each train. The red brake buttons stop the corresponding train.<br>
+If you connect a <i>Bluetooth controller</i> to the device running the web browser, you can use it to control the trains and trigger sound effects according to the following scheme:
+<br>
+<p align="center"><img src="html/img/gamepad.png" alt="Gamepad buttons" width="500"></p><br>      
     </td>
   </tr>
 </table>
