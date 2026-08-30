@@ -311,14 +311,26 @@ Here you can modify the <i>Host name</i> and Wi-Fi settings (<i>SSID</i> and <i>
 Finally, you can configure the <i>Network time</i> settings (<i>Server</i> and <i>Time zone</i>), which are used to synchronize the MCU's internal clock and set the correct local time.
     </td>
   </tr>
+
   <tr>
     <td valign="top">
-      <img src="images/gui/config1.png" alt="Configuration - Trains">
+      <img src="images/gui/config2.png" alt="Configuration - Trains">
     </td>
     <td valign="top">
       <b>Trains tab</b><br>
 In the <i>Trains</i> tab, you can configure the trains controlled by the hub. Five channels are available, numbered from 0 to 4. Channel 0 is reserved for the train whose motor is directly connected to the hub's motor driver. Channels 1 to 4 can be assigned to additional trains controlled via IR using the <i>Power Functions</i> protocol. Keep in mind that <i>Power Functions</i> trains can only be controlled if your hub is equipped with an IR module (e.g., PCB0100).<br>
-Each channel/train can be enabled or disabled independently. For each train, you can invert the motor slider direction (<i>Invert direction</i>), specify the train <i>Name</i>, and define the alternative name used by <i>Alexa</i> to control the train in the opposite direction (<i>Name reverse</i>). You can also fine-tune the acceleration and braking behavior using the <i>Acc. amount</i> and <i>Acc. step time (ms)</i> parameters, providing smoother and more realistic speed changes when the motor slider is moved.
+Each channel/train can be enabled or disabled independently. For each train, you can invert the motor slider direction (<i>Invert direction</i>), specify the train <i>Name</i>, and define the alternative name used by <i>Alexa</i> to control the train in the opposite direction (<i>Name reverse</i>). You can also fine-tune the acceleration and braking behavior using the <i>Acc. amount</i> and <i>Acc. step time (ms)</i> parameters, providing smoother and more realistic speed changes when the motor slider is moved.<br>
+For <i>Power Functions</i> channels/trains, you can also select the <i>Port</i> (<i>Red</i> or <i>Blue</i>) according to the output port of the IR receiver to which the motor is connected.
+    </td>
+  </tr>
+
+  <tr>
+    <td valign="top">
+      <img src="images/gui/config3.png" alt="Configuration - Powered Up emulation">
+    </td>
+    <td valign="top">
+      <b>Powered Up emulation tab</b><br>
+In this tab, you can configure the <i>Powered Up emulation</i> settings. You can define the behavior of the <i>mode switch</i> (<i>Default enabled</i>), select the <i>Emulated port</i> (<i>A</i> or <i>B</i>), and bind the emulated port to a specific train channel. In particular, <i>Powered Up emulation</i> can also be enabled for <i>Power Functions</i> trains, effectively creating a Bluetooth LE-to-IR bridge that allows them to be controlled as if they were <i>Powered Up</i> devices.
     </td>
   </tr>
 </table>
