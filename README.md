@@ -280,9 +280,22 @@ cp LegoinoCommon.h ~/Arduino/libraries/Legoino/src
 bla, bla, bla...
 
 ## 6. Configuration & usage
-bla, bla, bla...
+After the installation of the firmware, the copy of the system files and the wifi configuration you can explore the *graphic user interface* (GUI) of the web app just typing in your browser: http://trenolego  
+The main page will be:
+<table>
+  <tr>
+    <td>
+      <img src="images/gui/index.png" alt="Main page of the GUI" width="400">
+    </td>
+    <td valign="top">
+At the top, three yellow buttons are displayed. Click the <i>gears</i> button to open the settings page (see below). Click the <i>speaker</i> button to turn the background music on or off. Click the <i>train</i> button to manually add other <i>TrenoLEGO</i> hubs by specifying their host name or IP address.<br>
+The blue buttons can be used to play seven different sound effects. Use the sliders to control the speed and direction of each train. The red brake buttons stop the corresponding train.
+    </td>
+  </tr>
+</table>
 
 ## 7. To do
 - Step-by-step guide to insert all components into *88000-compatible* hub.
 - Automatic recognition of the trains in the local net. In this way, you can control all the trains from the same web-app.
+- Torque boost for a soft start of heavy trains.
 - Simultaneus *PoweredUP* and advanced hub modes on ESP32-S3.
