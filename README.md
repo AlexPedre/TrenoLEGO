@@ -199,6 +199,23 @@ The following schematics show how to connect and wire the different components.
   <img src="images/schematics/NodeMCU.svg" alt="Schematics for NodeMCU" width="100%">
 </p>
 
+Here are examples of hubs built by me:
+
+<table align="center">
+   <tr>
+     <td align="center" colspan="3">Hub with PCB0100 IR board, built around a 18650 battery holder</td>
+   </tr>
+   <tr>
+    <td align="center"><img src="images/hubs/custom_top.jpg" alt="Custom top view" width="200"></td>
+    <td align="center"><img src="images/hubs/custom_side1.jpg" alt="Custom side view" width="200"></td>
+    <td align="center"><img src="images/hubs/custom_side2.jpg" alt="Custom side view" width="200"></td>
+   </tr>
+   <tr>
+    <td align="center">DRV8833, ESP32-S3 SuperMini with 1N4007 diode and the power bank circuit.</td>
+    <td align="center">Power switch, mode switch and voltage divider made by two 100k resistor and 100 nF capacitor.</td>
+   </tr>
+</table>
+
 ## 4. Software requirements
 To develop *TrenoLEGO*, I used *Arduino IDE* 1.8.19 rather than version 2.x, as the latest releases are too resource-intensive to run efficiently on my Chromebook using the Linux environment (*Crostini*). However, feel free to use a newer version of the *Arduino IDE* or any other compatible development environment.
 
@@ -246,3 +263,14 @@ For Linux:
 cp error_constants.h ~/Arduino15/packages/esp32/tools/riscv32-esp-elf-gcc/esp-2021r2-patch5-8.4.0/riscv32-esp-elf/include/c++/8.4.0/bits
 cp LegoinoCommon.h ~/Arduino/libraries/Legoino/src
 ```
+
+## 5. How to build the firmware and copy the required files into MCU file system
+bla, bla, bla...
+
+## 6. Configuration & usage
+bla, bla, bla...
+
+## 7. To do
+- Step-by-step guide to insert all components into *88000-compatible* hub.
+- Automatic recognition of the trains in the local net. In this way, you can control all the trains from the same web-app.
+- Simultaneus *PoweredUP* and advanced hub modes on ESP32-S3.
