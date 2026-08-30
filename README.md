@@ -297,7 +297,9 @@ If you connect a <i>Bluetooth controller</i> to the device running the web brows
     </td>
   </tr>
 </table>
-Clicking the <i>gears</i> button, you open the settings page:
+  
+Clicking the *gears* button, you open the configuration page:
+  
 <table>
   <tr>
     <td valign="top">
@@ -305,6 +307,8 @@ Clicking the <i>gears</i> button, you open the settings page:
     </td>
     <td valign="top">
       <b>Configuration - Network</b><br>
+Here you can modify the <i>Host name</i> and Wi-Fi settings (<i>SSID</i> and <i>Password</i>), as well as enable or disable services such as <i>FTP</i> (required to update the GUI files), <i>Telnet</i> (which provides access to the remote console for debugging the firmware and changing settings), and <i>MQTT</i>. For the MQTT service, you can also configure the <i>Server</i>, <i>TCP port</i> (default: 1883), <i>User name</i>, and <i>Password</i>.<br>
+Finally, you can configure the <i>Network time</i> settings (<i>Server</i> and <i>Time zone</i>), which are used to synchronize the MCU's internal clock and set the correct local time.
     </td>
   </tr>
 </table>
