@@ -16,6 +16,7 @@ Advanced Hub for old (4.5V) and modern LEGO trains
 The main features are:
 
 - Support for old *4.5V motors* (but you can increase the power up to 6-6.5V without burning the MCU).
+- Rechargable Li-ion battery.
 - *PoweredUp* emulation: *TrenoLEGO* can be configured as a real PoweredUp hub and can be connected with LEGO controllers and
   *PoweredUp App*
 - Possibility to control up to 4 *Power Functions* trains by optional IR transmitter. 
@@ -203,16 +204,27 @@ Here are examples of hubs built by me:
 
 <table align="center">
    <tr>
-     <td align="center" colspan="3">Hub with PCB0100 IR board, built around a 18650 battery holder</td>
+     <td align="center" colspan="3"><b>Hub with PCB0100 IR board, built around a 18650 battery holder</b></td>
    </tr>
    <tr>
-    <td align="center"><img src="images/hubs/custom_top.jpg" alt="Custom top view" width="200"></td>
-    <td align="center"><img src="images/hubs/custom_side1.jpg" alt="Custom side view" width="200"></td>
-    <td align="center"><img src="images/hubs/custom_side2.jpg" alt="Custom side view" width="200"></td>
+    <td align="center"><img src="images/hubs/custom_top.jpg"   alt="Custom top view"  width="250"></td>
+    <td align="center"><img src="images/hubs/custom_side1.jpg" alt="Custom side view" width="250"></td>
+    <td align="center"><img src="images/hubs/custom_side2.jpg" alt="Custom side view" width="250"></td>
    </tr>
    <tr>
     <td align="center">DRV8833, ESP32-S3 SuperMini with 1N4007 diode and the power bank circuit.</td>
     <td align="center">Power switch, mode switch and voltage divider made by two 100k resistor and 100 nF capacitor.</td>
+    <td align="center">18650 battery and PCB0100 IR board. All parts are fixed by tape.</td>
+   </tr>
+   <tr>
+    <td align="center"><img src="images/hubs/custom_installed1.jpg" alt="Custom top view"  width="250"></td>
+    <td align="center"><img src="images/hubs/custom_installed2.jpg" alt="Custom back view" width="120"></td>
+    <td align="center"><img src="images/hubs/custom_installed3.jpg" alt="Custom IR detail" width="120"></td>
+   </tr>
+   <tr>
+    <td align="center">The hub inside a custom vintage tender.</td>
+    <td align="center">Hole for USB-C connector to charge the battery.</td>
+    <td align="center">18650 battery and PCB0100 IR board. All parts are fixed by tape.</td>
    </tr>
 </table>
 
