@@ -277,7 +277,10 @@ cp LegoinoCommon.h ~/Arduino/libraries/Legoino/src
 ```
 
 ## 5. How to build the firmware and copy the required files into MCU file system
-bla, bla, bla...
+To build the firmware, you must install at least a [Arduino IDE 1.8.19](https://www.arduino.cc/en/software/) and the related software dependencies.  
+To install  *ESP32* toolchain select *Tools -> Boards -> Boards Manager* main menu item, search for **esp32** by Expressivf System, select *2.0.11* as version and finally press *install* button. It is very important to choose the 2.0.11 toolchain version, otherwiese it will impossible to build the *Legoino* library.
+To install *ESP8266* toolchain, select *File -> Preferences*, type *https://arduino.esp8266.com/stable/package_esp8266com_index.json* in *Additional Boards Manager URLs* and click *Ok* button. Open the *Boards Manager* (*Tools -> Boards -> Boards Manager*) search for **esp8266** by ESP8266 Community, select *3.1.2* as version and finally press *Install* button. This step is required if you intend to use ESP8266-based boards (e.g. NodeMCU).  
+Install all libraries according to your MCU (see section 4).
 
 ## 6. Configuration & usage
 After the installation of the firmware, the copy of the system files and the wifi configuration you can explore the *graphic user interface* (GUI) of the web app just typing in your browser: http://trenolego  
