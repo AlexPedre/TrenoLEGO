@@ -234,24 +234,24 @@ To develop *TrenoLEGO*, I used *Arduino IDE* 1.8.19 rather than version 2.x, as 
 The following libraries are required to build the project:
 
 **For ESP32 C3 and S3:**
-- ESP32 2.0.11
-- Async TCP 2.0.0
-- Legoino 1.1.0
-- NimBLE Arduino 1.4.3
+- ESP32 by Expressif Systems 2.0.11
+- Async TCP by ESP32Async 3.4.10
+- Legoino by Corneliun Munz 1.1.0
+- NimBLE-Arduino by Ryan Powell 1.4.3
 
 **For NodeMCU/ESP8266:**
-- ESP8266 3.1.2 (only for ESP8266)
+- ESP8266 by ESP8266 Community 3.1.2 (only for ESP8266/NodeMCU)
+- ESP Async TCP by ESP32Async 2.0.0
 
 **For all targets:**
-- ArduinoJSON 7.4.3
-- CommandParser 1.1.1
-- ESP_Async_TCP 3.4.10
-- ESP_Async_WebServer 3.10.3
-- SP_Telnet 2.2.3
-- FauxmoESP 3.4.1
-- IRremoteESP8266 2.9.0
-- PubSubClient 2.8.0
-- SimpleFTPServer 3.0.2 (change in FtpServerKey.h to #define DEFAULT_STORAGE_TYPE_ESP32 STORAGE_LITTLEFS)
+- ArduinoJson by Benoit Blanchon 7.4.3
+- CommandParser by Anthony Zhang 1.1.1
+- ESP Async WebServer by ESP32Async 3.10.3
+- ESP Telnet by Lennart Hennings 2.2.3
+- FauxmoESP by Paul Vint 3.4.1
+- IRremoteESP8266 by David Conran 2.9.0
+- PubSubClient by Nick O'Leary 2.8.0
+- SimpleFTPServer by Renzo Mischianti 3.0.2
 
 **Patches for all ESP32**  
 Edit the *FtpServerKey.h* file in the *~/Arduino/libraries/SimpleFTPServer/* and change:  
@@ -280,7 +280,7 @@ cp LegoinoCommon.h ~/Arduino/libraries/Legoino/src
 To build the firmware, you must install at least a [Arduino IDE 1.8.19](https://www.arduino.cc/en/software/) and the related software dependencies.  
 To install  *ESP32* toolchain select *Tools -> Boards -> Boards Manager* main menu item, search for **esp32** by Expressivf System, select *2.0.11* as version and finally press *install* button. It is very important to choose the 2.0.11 toolchain version, otherwiese it will impossible to build the *Legoino* library.
 To install *ESP8266* toolchain, select *File -> Preferences*, type *https://arduino.esp8266.com/stable/package_esp8266com_index.json* in *Additional Boards Manager URLs* and click *Ok* button. Open the *Boards Manager* (*Tools -> Boards -> Boards Manager*) search for **esp8266** by ESP8266 Community, select *3.1.2* as version and finally press *Install* button. This step is required if you intend to use ESP8266-based boards (e.g. NodeMCU).  
-Install all libraries according to your MCU (see section 4).
+Install all libraries according to your MCU (see section 4) by *Library Manager* (*Sketch -> Include Library -> Manage Libraries*).
 
 ## 6. Configuration & usage
 After the installation of the firmware, the copy of the system files and the wifi configuration you can explore the *graphic user interface* (GUI) of the web app just typing in your browser: http://trenolego  
