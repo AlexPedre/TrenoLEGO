@@ -234,24 +234,24 @@ To develop *TrenoLEGO*, I used *Arduino IDE* 1.8.19 rather than version 2.x, as 
 The following libraries are required to build the project:
 
 **For ESP32 C3 and S3:**
-- ESP32 by Expressif Systems 2.0.11
-- Async TCP by ESP32Async 3.4.10
-- Legoino by Corneliun Munz 1.1.0
-- NimBLE-Arduino by Ryan Powell 1.4.3
+- *ESP32* board by Expressif Systems 2.0.11
+- *Async TCP* by ESP32Async 3.4.10
+- *Legoino* by Corneliun Munz 1.1.0
+- *NimBLE-Arduino* by Ryan Powell 1.4.3
 
 **For NodeMCU/ESP8266:**
-- ESP8266 by ESP8266 Community 3.1.2 (only for ESP8266/NodeMCU)
-- ESP Async TCP by ESP32Async 2.0.0
+- *ESP8266* board by ESP8266 Community 3.1.2 (only for ESP8266/NodeMCU)
+- *ESP Async TCP* by ESP32Async 2.0.0
 
 **For all targets:**
-- ArduinoJson by Benoit Blanchon 7.4.3
-- CommandParser by Anthony Zhang 1.1.1
-- ESP Async WebServer by ESP32Async 3.10.3
-- ESP Telnet by Lennart Hennings 2.2.3
-- FauxmoESP by Paul Vint 3.4.1
-- IRremoteESP8266 by David Conran 2.9.0
-- PubSubClient by Nick O'Leary 2.8.0
-- SimpleFTPServer by Renzo Mischianti 3.0.2
+- *ArduinoJson* by Benoit Blanchon 7.4.3
+- *CommandParser* by Anthony Zhang 1.1.1
+- *ESP Async WebServer* by ESP32Async 3.10.3
+- *ESP Telnet* by Lennart Hennings 2.2.3
+- *FauxmoESP* by Paul Vint 3.4.1
+- *IRremoteESP8266* by David Conran 2.9.0
+- *PubSubClient* by Nick O'Leary 2.8.0
+- *SimpleFTPServer* by Renzo Mischianti 3.0.2
 
 **Patches for all ESP32**  
 Edit the *FtpServerKey.h* file in the *~/Arduino/libraries/SimpleFTPServer/* and change:  
