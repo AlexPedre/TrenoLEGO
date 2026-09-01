@@ -285,9 +285,9 @@ cp LegoinoCommon.h ~/Arduino/libraries/Legoino/src
 ```
   
 For Windows:
-```cmd.exe
-copy error_constants.h C:\Users\YOUR_ACCOUNT_NAME\AppData\Local\Arduino15\packages\esp32\tools\riscv32-esp-elf-gcc\esp-2021r2-patch5-8.4.0\riscv32-esp-elf\include\c++\8.4.0\bits
-copy LegoinoCommon.h C:\Users\YOUR_ACCOUNT_NAME\Documents\Arduino\libraries\Legoino\src
+```cmd
+copy error_constants.h "%LOCALAPPDATA%\Arduino15\packages\esp32\tools\riscv32-esp-elf-gcc\esp-2021r2-patch5-8.4.0\riscv32-esp-elf\include\c++\8.4.0\bits"
+copy LegoinoCommon.h "%USERPROFILE%\Documents\Arduino\libraries\Legoino\src"
 ```
 
 ## 5. How to build the firmware and copy the required files into MCU file system
