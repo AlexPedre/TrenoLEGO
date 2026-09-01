@@ -65,7 +65,7 @@ All the hardware components were purchased from *AliExpress*. Pictures of the va
     <td align="center"><img src="images/hardware/drv8833.jpg" alt="DRV8833" width="200"></td>
    </tr>
    <tr>
-    <td align="center">DRV8233dual channel motor driver</td>
+    <td align="center">DRV8233 dual channel motor driver</td>
    </tr>
   </table>
   
