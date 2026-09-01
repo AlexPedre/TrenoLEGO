@@ -31,6 +31,15 @@ The main features are:
 - Automatic language localization (*english* and *italian* supported).
 - Speech synthesis.
 
+Here is a short video presenting the main features of *TrenoLEGO* hub:
+
+<p align="center">
+  <a href="https://youtu.be/Lw-Lzx7ifEI">
+    <img src="https://img.youtube.com/vi/Lw-Lzx7ifEI/maxresdefault.jpg" alt="Watch TrenoLEGO in action" width="500">
+  </a><br>
+  <i>Click the image to watch the video on YouTube.</i>
+</p>
+  
 ## 2. Hardware requirements
 All the hardware components were purchased from *AliExpress*. Pictures of the various components are provided below to help you identify suitable alternatives if you prefer to buy them from other online stores.
 
