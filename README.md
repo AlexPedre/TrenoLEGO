@@ -332,6 +332,29 @@ To upload the files:
   ```
 
   If you are upgrading an existing *TrenoLEGO* hub, edit the *credentials.py* file first and set the host name and administrator credentials to match those currently configured on your device.
+To configure the *SSID* and *password* used by *TrenoLEGO* to connect to your Wi-Fi network, you can use the *HTML* interface (see the next section) by opening http://trenolego (or http://192.168.1.1) in your web browser. Alternatively, you can use the *setwifi.sh* script on Linux or *setwifi.cmd* on Windows.
+
+  For Linux:
+
+  ```bash
+  ./setwifi.sh <SSID> <PASSWORD>
+  ```
+
+  For Windows:
+
+  ```cmd
+  setwifi.cmd <SSID> <PASSWORD>
+  ```
+- Finally, reset the hub. If the Wi-Fi settings are correct and the connection is successfully established, the status LED will turn green.
+
+Here is reported the meaning of each color of the status LED. 
+  
+<table align="center>
+ <td>
+  <tr><b>Color</b></tr>
+  <tr><b>Description</b></tr>
+ </td>
+</table>
 
 
 ## 6. Configuration & usage
