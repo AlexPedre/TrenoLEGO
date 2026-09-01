@@ -349,11 +349,31 @@ To configure the *SSID* and *password* used by *TrenoLEGO* to connect to your Wi
 
 Here is reported the meaning of each color of the status LED. 
   
-<table align="center>
- <td>
-  <tr><b>Color</b></tr>
-  <tr><b>Description</b></tr>
- </td>
+<table align="center">
+  <tr>
+    <th>Color</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>Rainbow</td>
+    <td>The hub is trying to connect to Wi-Fi</td>
+  </tr>
+  <tr>
+    <td>Blue</td>
+    <td>The hub is in AP mode and it is ready to accept Wi-Fi connections</td>
+  </tr>
+  <tr>
+    <td>Green</td>
+    <td>The hub is successfully connected to the Wi-Fi</td>
+  </tr>
+  <tr>
+    <td>Cyan</td>
+    <td>The hub is in *Powered Up* mode and now you can control the train with the official LEGO app</td>
+  </tr>
+  <tr>
+    <td>Yellow</td>
+    <td>The firmware is upbating</td>
+  </tr>
 </table>
 
 
