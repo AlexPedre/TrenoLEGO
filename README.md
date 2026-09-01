@@ -139,7 +139,8 @@ All the hardware components were purchased from *AliExpress*. Pictures of the va
     <td align="center">Switches</td>
     <td align="center">Mercury tilt switches</td>
    </tr>
-  </table> 
+  </table>
+
 - **Resistors & capacitor** (optional)  
   Two resistors (1/4 W, 5%) and one capacitor are required to implement a software-based *BMS* (Battery Monitoring System). More specifically, the two resistors are connected in series between the battery terminals to form a voltage divider, reducing the battery voltage to a level that can be safely measured by the MCU's *ADC* (Analog-to-Digital Converter). The required resistor values may vary depending on the MCU and its ADC characteristics, as shown in the following table:
   
@@ -280,12 +281,14 @@ In *patches* directory there are patched files of libraries and SDK for **ESP32 
 
 For Linux:
 ```bash
+cd patches
 cp error_constants.h ~/Arduino15/packages/esp32/tools/riscv32-esp-elf-gcc/esp-2021r2-patch5-8.4.0/riscv32-esp-elf/include/c++/8.4.0/bits
 cp LegoinoCommon.h ~/Arduino/libraries/Legoino/src
 ```
   
 For Windows:
 ```cmd
+cd patches
 copy error_constants.h "%LOCALAPPDATA%\Arduino15\packages\esp32\tools\riscv32-esp-elf-gcc\esp-2021r2-patch5-8.4.0\riscv32-esp-elf\include\c++\8.4.0\bits"
 copy LegoinoCommon.h "%USERPROFILE%\Documents\Arduino\libraries\Legoino\src"
 ```
