@@ -294,10 +294,19 @@ copy LegoinoCommon.h "%USERPROFILE%\Documents\Arduino\libraries\Legoino\src"
 ```
 
 ## 5. How to build the firmware and copy the required files into MCU file system
-To build the firmware, you must install at least a [Arduino IDE 1.8.19](https://www.arduino.cc/en/software/) and the related software dependencies.  
-To install  *ESP32* toolchain select *Tools -> Boards -> Boards Manager* main menu item, search for **esp32** by Expressivf System, select *2.0.11* as version and finally press *install* button. It is very important to choose the 2.0.11 toolchain version, otherwiese it will impossible to build the *Legoino* library.
-To install *ESP8266* toolchain, select *File -> Preferences*, type *https://arduino.esp8266.com/stable/package_esp8266com_index.json* in *Additional Boards Manager URLs* and click *Ok* button. Open the *Boards Manager* (*Tools -> Boards -> Boards Manager*) search for **esp8266** by ESP8266 Community, select *3.1.2* as version and finally press *Install* button. This step is required if you intend to use ESP8266-based boards (e.g. NodeMCU).  
-Install all libraries according to your MCU (see section 4) by *Library Manager* (*Sketch -> Include Library -> Manage Libraries*) and don't forget to patch the libraries (see the previous section).
+To build the firmware, you must install at least a [Arduino IDE 1.8.19](https://www.arduino.cc/en/software/) and the related software dependencies:  
+- Install the toolchain:
+  - To install  *ESP32* toolchain select *Tools -> Boards -> Boards Manager* main menu item, search for **esp32** by Expressivf System, select *2.0.11* as version and finally press *install* button. It is very important to choose the 2.0.11 toolchain version, otherwiese it will impossible to build the *Legoino* library.
+  - To install *ESP8266* toolchain, select *File -> Preferences*, type *https://arduino.esp8266.com/stable/package_esp8266com_index.json* in *Additional Boards Manager URLs* and click *Ok* button. Open the *Boards Manager* (*Tools -> Boards -> Boards Manager*) search for **esp8266** by ESP8266 Community, select *3.1.2* as version and finally press *Install* button. This step is required if you intend to use ESP8266-based boards (e.g. NodeMCU).  
+- Install all libraries according to your MCU (see section 4) by *Library Manager* (*Sketch -> Include Library -> Manage Libraries*) and don't forget to patch the libraries (see the previous section).
+- Rename *TrenoLEGO-main* directory to *TrenoLEGO*.
+- Open *TrenoLEGO.ino* (*File -> Open*)
+- Connect the MCU by USB cable.
+- Select the comunication port: *Tools -> Port -> /dev/ttyUSBX* or *Tools -> Port -> /dev/ttyACMX* for Linux, *Tools -> Port -> COMX* for Windows, where *X* is the port number.
+- Choose the board and its configuration:
+  - *ESP32-C3 Supermini*
+    - Tools -> Board -> ESP32 Arduino -> ESP32C3 Dev Module
+    - 
 
 ## 6. Configuration & usage
 After the installation of the firmware, the copy of the system files and the wifi configuration you can explore the *graphic user interface* (GUI) of the web app just typing in your browser: http://trenolego  
