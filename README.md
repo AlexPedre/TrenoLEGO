@@ -320,7 +320,20 @@ To build the firmware, you must install at least a [Arduino IDE 1.8.19](https://
     - *Tools -> CPU frequency -> 160MHz*
 - Upload the sketch (*Tools -> Upload*). This step may take some time, especially when building the sketch for the first time after starting the Arduino IDE.
 - If the ESP32-S3 cannot enter programming mode automatically, hold the *BOOT* button, press and release *RESET*, and then release *BOOT*. Start the upload and press *RESET* again after programming if the board does not restart automatically.
-- 
+
+To upload the files:
+- Wait until the board LED stops flashing and remains solid blue, indicating that the MCU has entered *AP mode*.
+- Connect your PC to the Wi-Fi network created by the MCU. The default SSID is *TrenoLEGO*, which corresponds to the default host name. This Wi-Fi network is not password-protected.
+- Enter the *scripts* directory and run the *upload.py* script. On both Linux and Windows:
+
+  ```bash
+  cd scripts
+  python3 upload.py
+  ```
+
+  If you are upgrading an existing *TrenoLEGO* hub, edit the *credentials.py* file first and set the host name and administrator credentials to match those currently configured on your device.
+
+
 ## 6. Configuration & usage
 After the installation of the firmware, the copy of the system files and the wifi configuration you can explore the *graphic user interface* (GUI) of the web app just typing in your browser: http://trenolego  
 The main page will be:
