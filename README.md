@@ -315,7 +315,12 @@ To build the firmware, you must install at least a [Arduino IDE 1.8.19](https://
     - *Tools -> USB CDC On Boot -> Enabled*
     - *Tools -> Partition scheme -> Default 4MB with spiff (1.2MB APP / 1.5MB SPIFF)*
     - *Tools -> PSRAM -> QSPI PSRAM* or *OPI PSRAM* for R8 chips
-  
+  - **ESP8266 NodeMCU**
+    - *Tools -> Board -> ESP8266 Boards (3.1.2) -> NodeMCU 1.0 (ESP 12E Module)*
+    - *Tools -> CPU frequency -> 160MHz*
+- Upload the sketch (*Tools -> Upload*). This step may take some time, especially when building the sketch for the first time after starting the Arduino IDE.
+- If the ESP32-S3 cannot enter programming mode automatically, hold the *BOOT* button, press and release *RESET*, and then release *BOOT*. Start the upload and press *RESET* again after programming if the board does not restart automatically.
+- 
 ## 6. Configuration & usage
 After the installation of the firmware, the copy of the system files and the wifi configuration you can explore the *graphic user interface* (GUI) of the web app just typing in your browser: http://trenolego  
 The main page will be:
