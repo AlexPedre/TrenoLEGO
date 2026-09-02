@@ -466,6 +466,13 @@ From this page, you can update the hub firmware via OTA. Select the firmware fil
     </td>
   </tr>
 </table>
+  
+You can access the command-line interface either through a *USB serial monitor*, such as the one provided by the *Arduino IDE*, or through the *Telnet service*, which must be enabled and requires the *administrator credentials*.
+To connect via *Telnet* for both Linux and Windows:
+
+```bash
+telnet trenolego
+```
 
 ## 7. To do
 - Step-by-step guide to insert all components into *88000-compatible* hub.
