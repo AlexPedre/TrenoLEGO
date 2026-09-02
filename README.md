@@ -556,6 +556,71 @@ The Telnet command is not installed by default on Windows. If it is missing, ope
           <td>STR</td>
           <td>System language (en, it).</td>
         </tr>
+        <tr>
+          <td>legohub</td>
+          <td>BOOL</td>
+          <td>Enable/disable the LEGO <i>Powered Up</i> emulation.</td>
+        </tr>
+        <tr>
+          <td>legohubport</td>
+          <td>STR</td>
+          <td>Emulated port (<i>A</i> or <i>B</i>).</td>
+        </tr>
+        <tr>
+          <td>legohubconch</td>
+          <td>INT</td>
+          <td>Connected channel/train with the emulated port.</td>
+        </tr>
+        <tr>
+          <td>mqtt</td>
+          <td>BOOL</td>
+          <td>Enable/disable the MQTT service.</td>
+        </tr>
+        <tr>
+          <td>mqttavail</td>
+          <td>INT</td>
+          <td>Set the MQTT avail refresh time (ms).</td>
+        </tr>
+        <tr>
+          <td>mqttserver</td>
+          <td>STR</td>
+          <td>MQTT remote server.</td>
+        </tr>
+        <tr>
+          <td>mqttuser</td>
+          <td>STR</td>
+          <td>MQTT user name.</td>
+        </tr>
+        <tr>
+          <td>mqttport</td>
+          <td>INT</td>
+          <td>MQTT server port (1...65535).</td>
+        </tr>
+        <tr>
+          <td>mqttpwd</td>
+          <td>STR</td>
+          <td>MQTT password.</td>
+        </tr>
+        <tr>
+          <td>ntpserver</td>
+          <td>STR</td>
+          <td>NTP server.</td>
+        </tr>
+        <tr>
+          <td>pwmdeband</td>
+          <td>INT</td>
+          <td>PWM deband (0...255).</td>
+        </tr>
+        <tr>
+          <td>pwmmax</td>
+          <td>INT</td>
+          <td>PWM max value (0...255).</td>
+        </tr>
+        <tr>
+          <td>pwmmin</td>
+          <td>INT</td>
+          <td>PWM min value (0...255).</td>
+        </tr>
       </table>
     </td>
   </tr>
