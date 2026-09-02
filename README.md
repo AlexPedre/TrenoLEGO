@@ -473,6 +473,7 @@ To connect via *Telnet* for both Linux and Windows:
 ```bash
 telnet trenolego
 ```
+The Telnet command is not installed by default on Windows. If it is missing, open *Control Panel → Programs → Turn Windows features on or off*, enable *Telnet Client*, and click *OK*.
 
 ## 7. To do
 - Step-by-step guide to insert all components into *88000-compatible* hub.
