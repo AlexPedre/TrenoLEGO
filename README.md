@@ -654,7 +654,7 @@ The Telnet command is not installed by default on Windows. If it is missing, ope
         <tr>
           <td>vibration</td>
           <td>BOOL</td>
-          <tdEnable/disable haptic feedback for both the device and the gamepad.</td>
+          <td>Enable/disable haptic feedback for both the device and the gamepad.</td>
         </tr>
         <tr>
           <td>wifipwd</td>
