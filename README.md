@@ -621,6 +621,46 @@ The Telnet command is not installed by default on Windows. If it is missing, ope
           <td>INT</td>
           <td>PWM min value (0...255).</td>
         </tr>
+        <tr>
+          <td>sleep</td>
+          <td>BOOL</td>
+          <td>Enable/disable the hub suspension for power saving.</td>
+        </tr>
+        <tr>
+          <td>sleeptime</td>
+          <td>INT</td>
+          <td>Inactivity time in seconds for the suspension.</td>
+        </tr>
+        <tr>
+          <td>speech</td>
+          <td>BOOL</td>
+          <td>Enable/disable the speech synthesis.</td>
+        </tr>
+        <tr>
+          <td>ssid</td>
+          <td>STR</td>
+          <td>WiFi SSID.</td>
+        </tr>
+        <tr>
+          <td>telnet</td>
+          <td>BOOL</td>
+          <td>Enable/disable the telnet server.</td>
+        </tr>
+        <tr>
+          <td>timezone</td>
+          <td>STR</td>
+          <td>Time zone.</td>
+        </tr>
+        <tr>
+          <td>vibration</td>
+          <td>BOOL</td>
+          <tdEnable/disable haptic feedback for both the device and the gamepad.</td>
+        </tr>
+        <tr>
+          <td>wifipwd</td>
+          <td>STR</td>
+          <td>WiFi password.</td>
+        </tr>
       </table>
     </td>
   </tr>
