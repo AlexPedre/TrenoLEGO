@@ -530,6 +530,11 @@ The Telnet command is not installed by default on Windows. If it is missing, ope
     <td></td>
     <td>Show the status.</td>
   </tr>
+  <tr>
+    <td>tset</td>
+    <td>CHANNEL KEY VAL</td>
+    <td>Set the specific parameter <i>KEY</i> with the <i>VALUE</i> of <i>CHANNEL</i> (0-4).</td>
+  </tr>
 </table>
 
 ## 7. To do
