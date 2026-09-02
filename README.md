@@ -511,9 +511,53 @@ The Telnet command is not installed by default on Windows. If it is missing, ope
     <td>Save the settings to the internal disk (<i>prefs</i> file).</td>
   </tr>
   <tr>
-    <td>set</td>
-    <td>PARAMETER VALUE</td>
-    <td>Set the <i>PARAMETER</i> with <i>VALUE</i>.</td>
+    <td valign="top">set</td>
+    <td valign="top">PARAMETER VALUE</td>
+    <td>
+      Set the <i>PARAMETER</i> with <i>VALUE</i>.<br><br>
+      <table align="center">
+        <tr>
+          <th>PARAMETER</th>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>adminuser</td>
+          <td>STR</td>
+          <td>Change the administrator user name.</td>
+        </tr>
+        <tr>
+          <td>adminpass</td>
+          <td>STR</td>
+          <td>Change the administrator password.</td>
+        </tr>
+        <tr>
+          <td>debug</td>
+          <td>BOOL</td>
+          <td>Enable/disable the debug mode.</td>
+        </tr>
+        <tr>
+          <td>ftp</td>
+          <td>BOOL</td>
+          <td>Enable/disable the ftp server.</td>
+        </tr>
+        <tr>
+          <td>hostname</td>
+          <td>STR</td>
+          <td>Change the host name.</td>
+        </tr>
+        <tr>
+          <td>hue</td>
+          <td>BOOL</td>
+          <td>Enable/disable the Philips Hue emulation for Alexa.</td>
+        </tr>
+        <tr>
+          <td>lang</td>
+          <td>STR</td>
+          <td>System language (en, it).</td>
+        </tr>
+      </table>
+    </td>
   </tr>
   <tr>
     <td>showprefs</td>
