@@ -473,7 +473,64 @@ To connect via *Telnet* for both Linux and Windows:
 ```bash
 telnet trenolego
 ```
-The Telnet command is not installed by default on Windows. If it is missing, open *Control Panel → Programs → Turn Windows features on or off*, enable *Telnet Client*, and click *OK*.
+The Telnet command is not installed by default on Windows. If it is missing, open *Control Panel → Programs → Turn Windows features on or off*, enable *Telnet Client*, and click *OK*. Here is the list of the commands:
+<table align="center">
+  <tr>
+    <th>Command</th>
+    <th>Argument/s</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>format</td>
+    <td>CONFIRM</td>
+    <td>Format the internal distk with LittleFS file ssytem.</td>
+  </tr>
+  <tr>
+    <td>help</td>
+    <td></td>
+    <td>Show the list of the commands.</td>
+  </tr>
+  <tr>
+    <td>load</td>
+    <td>WHAT</td>
+    <td>Load the preferences. <i>WHAT</i> can be: <i>default</i> or <i>saved</i>.</td>
+  </tr>
+  <tr>
+    <td>motor</td>
+    <td>CHANNEL SPEED</td>
+    <td>Change motor <i>SPEED</i> (-255...255) of the <i>CHANNEL</i> (0-4).</td>
+  </tr>
+  <tr>
+    <td>reboot</td>
+    <td></td>
+    <td>Reboot the system.</td>
+  </tr>
+  <tr>
+    <td>save</td>
+    <td></td>
+    <td>Save the settings to the internal disk (<i>prefs</i> file).</td>
+  </tr>
+  <tr>
+    <td>set</td>
+    <td>PARAMETER VALUE</td>
+    <td>Set the <i>PARAMETER</i> with <i>VALUE</i>.</td>
+  </tr>
+  <tr>
+    <td>showprefs</td>
+    <td></td>
+    <td>Show the preference file.</td>
+  </tr>
+  <tr>
+    <td>sleep</td>
+    <td></td>
+    <td>Suspend the system immediately.</td>
+  </tr>
+  <tr>
+    <td>status</td>
+    <td></td>
+    <td>Show the status.</td>
+  </tr>
+</table>
 
 ## 7. To do
 - Step-by-step guide to insert all components into *88000-compatible* hub.
