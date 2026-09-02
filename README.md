@@ -531,9 +531,53 @@ The Telnet command is not installed by default on Windows. If it is missing, ope
     <td>Show the status.</td>
   </tr>
   <tr>
-    <td>tset</td>
-    <td>CHANNEL KEY VAL</td>
-    <td>Set the specific parameter <i>KEY</i> with the <i>VALUE</i> of <i>CHANNEL</i> (0-4).</td>
+    <td valign="top">tset</td>
+    <td valign="top">CHANNEL KEY VAL</td>
+    <td>
+      Set the specific parameter <i>KEY</i> with the <i>VALUE</i> of <i>CHANNEL</i> (0-4).<br><br>
+      <table align="center">
+        <tr>
+          <th>KEY</th>
+          <th>Type</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>accelamount</td>
+          <td>INT</td>
+          <td>Motor acceleration amount.</td>
+        </tr>
+        <tr>
+          <td>accelsteptime</td>
+          <td>INT</td>
+          <td>Motor acceleration step time.</td>
+        </tr>
+        <tr>
+          <td>enable</td>
+          <td>BOOL</td>
+          <td>Enable/disable the channel/train.</td>
+        </tr>
+        <tr>
+          <td>invert</td>
+          <td>BOOL</td>
+          <td>Reverse the motor commands.</td>
+        </tr>
+        <tr>
+          <td>name</td>
+          <td>STR</td>
+          <td>Set the train name.</td>
+        </tr>
+        <tr>
+          <td>namerev</td>
+          <td>STR</td>
+          <td>Set the train name for reverse (for Alexa).</td>
+        </tr>
+        <tr>
+          <td>port</td>
+          <td>STR</td>
+          <td>Set the port used for the motor (<i>red/blue</i>).</td>
+        </tr>
+      </table>
+    </td>
   </tr>
 </table>
 
